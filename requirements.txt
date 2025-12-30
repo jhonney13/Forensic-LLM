@@ -1,0 +1,7 @@
+rich>=13.0.0
+undetected-chromedriver
+beautifulsoup4
+selenium
+requests
+tqdm
+

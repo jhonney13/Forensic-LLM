@@ -1,0 +1,1798 @@
+[
+  {
+    "case_title": "Umeshbhai Premabhai Ahir vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Testimony of witnesses regarding Umeshbhai's actions and the events leading up to the death.",
+        "type": "witness",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Trial court testimonies"
+      },
+      {
+        "evidence": "Forensic evidence indicating injuries consistent with a violent struggle and multiple blows.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Post-mortem examination and forensic analysis of the victim's body"
+      },
+      {
+        "evidence": "The iron pipe used as the weapon.",
+        "type": "physical",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Crime scene investigation"
+      }
+    ],
+    "physical_evidence": [
+      "Iron pipe",
+      "Victim's body"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Testimony of witnesses regarding the altercation and Umeshbhai's involvement.",
+      "Expert testimony regarding the nature and severity of the injuries."
+    ],
+    "forensic_evidence": [
+      "Analysis of the injuries on the victim's body, indicating multiple blows with a blunt object.",
+      "Potential DNA evidence (though not explicitly detailed in the provided text)."
+    ],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [
+      "Motive (though not explicitly stated, the nature of the crime suggests a potential conflict or dispute)",
+      "Opportunity (Umeshbhai's presence at the scene)"
+    ],
+    "key_facts": [
+      "Umeshbhai Ahir was involved in a violent altercation with the victim.",
+      "The victim sustained multiple injuries consistent with being struck with a blunt object, likely an iron pipe."
+    ],
+    "legal_issues": [
+      "Murder (Section 302 of the Indian Penal Code)",
+      "Establishing intent and proving the act of murder"
+    ],
+    "outcome": "Convicted of murder under Section 302 of the Indian Penal Code",
+    "summary": "Umeshbhai Ahir was found guilty of murdering the victim after a violent altercation resulted in multiple injuries inflicted with an iron pipe. Forensic evidence and witness testimony established his involvement and intent.",
+    "case_index": 0,
+    "case_link": "https://indiankanoon.org/doc/48565661/",
+    "court": "Gujarat High Court",
+    "case_date": "11/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Rameshkumar Shankarlal Shah vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The court considered the evidence presented regarding the alleged offenses under Sections 304, 120B read with 114 of the Indian Penal Code, focusing on the prosecution's case and the defense's challenges to the framing of the charges.",
+        "type": "legal/argumentative",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court's analysis of the case"
+      },
+      {
+        "evidence": "The court scrutinized the evidence presented by the prosecution, including witness testimonies and any supporting documentation, to determine if it met the legal standards for establishing guilt beyond a reasonable doubt.",
+        "type": "legal/investigative",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court's analysis of the case"
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [
+      {
+        "evidence": "Witness testimonies were a crucial element, with the court evaluating their credibility, consistency, and potential biases.",
+        "type": "testimonial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Witness accounts"
+      }
+    ],
+    "forensic_evidence": [],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [],
+    "key_facts": [
+      "The case involved allegations of culpable homicide (Section 304 IPC) and criminal conspiracy (Section 120B IPC).",
+      "The court was tasked with reviewing the evidence and determining whether the charges were appropriately framed."
+    ],
+    "legal_issues": [
+      "Framing of charges under the Indian Penal Code (IPC)",
+      "Culpable homicide (Section 304 IPC)",
+      "Criminal conspiracy (Section 120B IPC)"
+    ],
+    "outcome": "The application was allowed. Rule is made absolute. The First Information Report (C.R. No.I-54 of 2014) is quashed so far as the applicant herein is concerned.",
+    "summary": "This judgment addresses the legality of the charges framed in a criminal case involving allegations of culpable homicide and criminal conspiracy. The court ultimately quashed the First Information Report due to concerns about the evidence presented and the manner in which the charges were formulated.",
+    "case_index": 1,
+    "case_link": "https://indiankanoon.org/doc/114294154/",
+    "court": "Gujarat High Court",
+    "case_date": "29/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Rambhail Manubhai Gohil vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The prosecution's case hinged on establishing that the accused acted with intent to cause grievous hurt, and that the assault was premeditated.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Prosecution arguments and court interpretation"
+      },
+      {
+        "evidence": "The court considered the nature of the assault – a sustained attack with a weapon – as indicative of intent.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court’s analysis of the assault itself"
+      },
+      {
+        "evidence": "The prosecution presented evidence suggesting a potential motive for the assault (though not definitively proven).",
+        "type": "circumstantial",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Prosecution’s arguments regarding motive"
+      }
+    ],
+    "physical_evidence": [
+      "Weapon used in the assault (a dagger)",
+      "Injuries sustained by the victim"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Eyewitness accounts of the assault (though potentially unreliable)",
+      "Testimony of the victim regarding the attack"
+    ],
+    "forensic_evidence": [
+      "Fingerprints found on the weapon",
+      "Analysis of the victim’s injuries"
+    ],
+    "documentary_evidence": [
+      "Police reports related to the incident",
+      "Medical records of the victim"
+    ],
+    "circumstantial_evidence": [
+      "The accused’s prior history (if any)",
+      "The circumstances surrounding the assault"
+    ],
+    "key_facts": [
+      "The accused attacked the victim with a dagger.",
+      "The attack resulted in serious injuries to the victim."
+    ],
+    "legal_issues": [
+      "Intent to cause grievous hurt (Section 325 of the IPC)",
+      "Premeditation (Section 300 of the IPC)"
+    ],
+    "outcome": "The conviction was altered from Section 300 of the IPC to Section 299 of the IPC.",
+    "summary": "The court found the accused guilty of assault (Section 299 of the IPC) due to the serious nature of the attack and the intent to cause grievous hurt, despite the absence of definitive proof of premeditation. The punishment was adjusted accordingly.",
+    "case_index": 2,
+    "case_link": "https://indiankanoon.org/doc/5332220/",
+    "court": "Gujarat High Court",
+    "case_date": "03 /02/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "The State Of Gujarat vs Kara Arshi Odedara & ...",
+    "evidence_found": [
+      {
+        "evidence": "Autopsy report indicating death was a suicide.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Forensic Science Laboratory (FSL) report"
+      },
+      {
+        "evidence": "Testimony of Devayat Khimabhai (Investigating Officer) confirming suicide classification.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Police Investigation Report"
+      },
+      {
+        "evidence": "Evidence of the deceased's son, suggesting a motive for suicide.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Witness statements and family information"
+      },
+      {
+        "evidence": "Length of marriage (over 8 years) – mitigating factor against homicide charges.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Family records and witness testimony"
+      }
+    ],
+    "physical_evidence": [
+      "None explicitly mentioned in the judgment summary.",
+      "Likely included autopsy samples and potentially items found at the scene (not detailed in this excerpt)"
+    ],
+    "digital_evidence": [
+      "None explicitly mentioned in the judgment summary."
+    ],
+    "witness_testimony": [
+      "Devayat Khimabhai (Investigating Officer) - provided the FSL report's findings.",
+      "Other witnesses (family, neighbors) - likely provided accounts of the deceased's state of mind and circumstances."
+    ],
+    "forensic_evidence": [
+      "Autopsy report – determined the cause of death was suicide.",
+      "FSL analysis (likely DNA, fingerprints, etc.) - supporting the suicide conclusion."
+    ],
+    "documentary_evidence": [
+      "Marriage records (potentially) - confirming the length of the marriage."
+    ],
+    "circumstantial_evidence": [
+      "Presence of a son – suggesting a motive for suicide (e.g., desire to provide for him).",
+      "Deceased's state of mind (implied by witness testimony) – indicating a potential for suicidal ideation."
+    ],
+    "key_facts": [
+      "The deceased was found dead.",
+      "The cause of death was determined to be suicide by the Forensic Science Laboratory."
+    ],
+    "legal_issues": [
+      "Homicide charges against the accused.",
+      "Application of Section 113(A) of the Indian Evidence Act (regarding suicide)."
+    ],
+    "outcome": "Acquittal",
+    "summary": "The court acquitted Kara Arshi Odedara of homicide charges, finding that the evidence overwhelmingly supported a conclusion of suicide. The forensic evidence, coupled with witness testimony and the length of the marriage, strongly indicated a deliberate act of self-harm.",
+    "case_index": 3,
+    "case_link": "https://indiankanoon.org/doc/192384307/",
+    "court": "Gujarat High Court",
+    "case_date": "27/04/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Ranchhodbhai Manjibhai Chovatia & vs Pravinbhai Kalubhai Italiya",
+    "evidence_found": [
+      {
+        "evidence": "Threat administered in the past before the alleged incident.",
+        "type": "testimonial/circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Testimony of witnesses regarding prior threats"
+      },
+      {
+        "evidence": "Lack of evidence of criminal conspiracy or meeting of minds prior to the incident.",
+        "type": "circumstantial",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Admission by learned counsel appearing for the first informant"
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Eyewitness accounts (details not provided in the text)",
+      "Character witnesses (details not provided in the text)"
+    ],
+    "forensic_evidence": [],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [
+      "Threat as a motive",
+      "Opportunity presented by the threat"
+    ],
+    "key_facts": [
+      "A threat was allegedly administered in the past.",
+      "No evidence of a criminal conspiracy or meeting of minds was established."
+    ],
+    "legal_issues": [
+      "Abetment",
+      "Disobedience to lawful directions"
+    ],
+    "outcome": "Application allowed; proceedings quashed against the two applicants as far as they are concerned; further proceedings to proceed expeditiously against other co-accused.",
+    "summary": "The application to quash the charges against two individuals was granted due to the lack of evidence establishing a criminal conspiracy or meeting of minds. The charges were based solely on a past threat, which was deemed insufficient to proceed with the case.",
+    "case_index": 4,
+    "case_link": "https://indiankanoon.org/doc/53926714/",
+    "court": "Gujarat High Court",
+    "case_date": "05/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "State Of Gujarat vs Piyushbhai Babubhai Desai & Others",
+    "evidence_found": [
+      {
+        "evidence": "Eyewitness testimony regarding the assault and subsequent death of the deceased.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Statements of witnesses present at the scene."
+      },
+      {
+        "evidence": "Forensic analysis of the deceased's injuries, indicating a violent attack.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Medical examiner's report and crime scene investigation."
+      },
+      {
+        "evidence": "Recovery of a weapon (tommy) linked to the accused.",
+        "type": "physical",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Panchnama (affidavit) detailing the seizure of the weapon."
+      },
+      {
+        "evidence": "Panchnama documenting the events surrounding the incident and the accused's statements.",
+        "type": "documentary",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Official record of the incident."
+      }
+    ],
+    "physical_evidence": [
+      "tommy (weapon)",
+      "bloodstains",
+      "clothing of the deceased"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Statements from neighbors and family members regarding the accused's behavior and the deceased's distress"
+    ],
+    "forensic_evidence": [
+      "Analysis of the injuries consistent with a violent attack"
+    ],
+    "documentary_evidence": [
+      "Panchnama",
+      "police reports"
+    ],
+    "circumstantial_evidence": [
+      "Accused's behavior towards the deceased",
+      "Evidence of a strained relationship"
+    ],
+    "key_facts": [
+      "The deceased died as a result of a violent attack.",
+      "The accused was found to have possessed a weapon used in the attack."
+    ],
+    "legal_issues": [
+      "Murder (Section 304 Part II)",
+      "Attempt to Murder (Section 304 Part II)",
+      "Criminal Pleading (Section 203)",
+      "Cruelty and Torture (Section 498A)"
+    ],
+    "outcome": "Accused No. 2 found guilty under Section 304(Part II) and Section 203 of the IPC, while accused No. 1, 3, and 4 acquitted.",
+    "summary": "Based on the evidence presented, the court determined that the accused No. 2 was responsible for the death of the deceased through a violent attack, and was found guilty under relevant sections of the Indian Penal Code. The other accused were acquitted due to lack of sufficient evidence.",
+    "case_index": 5,
+    "case_link": "https://indiankanoon.org/doc/198916512/",
+    "court": "Gujarat High Court",
+    "case_date": "16/06/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "State Of Gujarat vs Bharat Laghugar",
+    "evidence_found": [
+      {
+        "evidence": "Detailed description of injuries and the room being locked from inside.",
+        "type": "physical",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Post-mortem examination, scene investigation"
+      },
+      {
+        "evidence": "Confession made by the accused’s sister-in-law, Simaben, corroborating the events.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Simaben's testimony"
+      },
+      {
+        "evidence": "Communication records between 01.05.2004 and 31.07.2004 obtained from the accused.",
+        "type": "digital",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Communication records"
+      },
+      {
+        "evidence": "Forensic analysis of the scene (though not explicitly detailed, implied by investigation)",
+        "type": "forensic",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Scene investigation"
+      }
+    ],
+    "physical_evidence": [
+      "Weapons (implied, based on the crime)",
+      "Clothing of the victim and accused"
+    ],
+    "digital_evidence": [
+      "Communication records between 01.05.2004 and 31.07.2004"
+    ],
+    "witness_testimony": [
+      "Simaben's testimony (confession)",
+      "Testimony of other witnesses (not explicitly detailed)"
+    ],
+    "forensic_evidence": [
+      "Potential DNA evidence from the scene",
+      "Fingerprint analysis"
+    ],
+    "documentary_evidence": [
+      "Police reports",
+      "Case files"
+    ],
+    "circumstantial_evidence": [
+      "The locked room suggests a deliberate act."
+    ],
+    "key_facts": [
+      "The accused was present in the room with the victim.",
+      "The room was locked from the inside."
+    ],
+    "legal_issues": [
+      "Murder (Section 302 of the Indian Penal Code)",
+      "Abduction/Kidnapping (Section 135 of the Bombay Police Act)"
+    ],
+    "outcome": "The appeal was allowed, and the acquittal was overturned. The accused was convicted for murder.",
+    "summary": "The accused was convicted for the murder of his wife based on circumstantial evidence, including her confession and the locked room scenario. The initial acquittal was overturned due to the strength of the prosecution's case.",
+    "case_index": 6,
+    "case_link": "https://indiankanoon.org/doc/199612885/",
+    "court": "Gujarat High Court",
+    "case_date": "27/09/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Patel Rohitkumar Leelachand & 4 vs State Of ... on 4 March, 2016",
+    "raw_response": "='./data/judgment_analysis.json'",
+    "error": "JSON parsing failed",
+    "case_index": 7,
+    "case_link": "https://indiankanoon.org/doc/179136833/",
+    "court": "Gujarat High Court",
+    "case_date": "04/03/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Nathiben Wife Of Kayabhai Alabhai & vs State Of ...",
+    "evidence_found": [
+      {
+        "evidence": "Medical examination revealed an enlarged spleen in the deceased, Nathiben.",
+        "type": "physical",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Medical Report"
+      },
+      {
+        "evidence": "Witness testimony placing the defendant near the scene of the crime around the time of the incident.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Eyewitness Accounts"
+      },
+      {
+        "evidence": "Forensic analysis of the injury patterns consistent with a forceful blow.",
+        "type": "forensic",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Ballistics Report"
+      }
+    ],
+    "physical_evidence": [
+      "Weapon (likely a blunt object)",
+      "Clothing of the deceased",
+      "Blood samples"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Eyewitness accounts of the defendant's presence near the scene.",
+      "Statements from family members regarding the deceased's relationship with the defendant."
+    ],
+    "forensic_evidence": [
+      "Ballistics analysis of the injury",
+      "DNA analysis of blood samples"
+    ],
+    "documentary_evidence": [
+      "Police reports",
+      "Medical records",
+      "Statements from witnesses"
+    ],
+    "circumstantial_evidence": [
+      "The defendant's motive (relationship with the deceased)",
+      "The defendant's opportunity to commit the crime"
+    ],
+    "key_facts": [
+      "Nathiben was found dead with injuries consistent with a violent assault.",
+      "The defendant was present in the vicinity of the crime scene at the time of the incident."
+    ],
+    "legal_issues": [
+      "Culpable homicide (attempted murder)",
+      "Section 304 Part II IPC (Unnatural death)"
+    ],
+    "outcome": "The court found the defendant guilty of culpable homicide under Section 304 Part II of the Indian Penal Code.",
+    "summary": "Nathiben was found dead with injuries indicative of a violent assault. The defendant was present near the scene, and forensic evidence supported the charge of culpable homicide. The court convicted the defendant under Section 304 Part II of the IPC.",
+    "case_index": 8,
+    "case_link": "https://indiankanoon.org/doc/194606709/",
+    "court": "Gujarat High Court",
+    "case_date": "19/02/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "The State Of Gujarat vs Natubhai Parsottambhai Patel",
+    "evidence_found": [
+      {
+        "evidence": "Testimony of Pritesh, stating he met Kamlaben and Pushpaben on their way to the field.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Pritesh's testimony"
+      },
+      {
+        "evidence": "Testimony of Kamlaben, stating she met with Bharatbhai and others in the field.",
+        "type": "witness",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Kamlaben's testimony"
+      },
+      {
+        "evidence": "Testimony of Pushpaben, stating Bharatbhai was also in the field.",
+        "type": "witness",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Pushpaben's testimony"
+      },
+      {
+        "evidence": "Medical evidence suggesting blunt force trauma to the head.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Post-mortem examination reports"
+      },
+      {
+        "evidence": "Presence of a Chapri (a type of donkey cart) within 20 meters of the scene.",
+        "type": "physical",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Witness testimony and scene investigation"
+      }
+    ],
+    "physical_evidence": [
+      "weapons",
+      "clothing",
+      "biological samples (potentially)",
+      "Chapri"
+    ],
+    "digital_evidence": [
+      "none explicitly mentioned"
+    ],
+    "witness_testimony": [
+      "Pritesh's account",
+      "Kamlaben's account",
+      "Pushpaben's account"
+    ],
+    "forensic_evidence": [
+      "ballistics analysis (potential)",
+      "wound analysis"
+    ],
+    "documentary_evidence": [
+      "police reports",
+      "complaint records"
+    ],
+    "circumstantial_evidence": [
+      "dispute between parties",
+      "Natubhai's presence in the area"
+    ],
+    "key_facts": [
+      "A dispute existed between the parties involved.",
+      "Natubhai was found to be staying in a Chapri within 20 meters of the scene."
+    ],
+    "legal_issues": [
+      "Establishing intent to commit murder.",
+      "Determining the credibility of witness testimony."
+    ],
+    "outcome": "The appeal was dismissed with no order as to costs.",
+    "summary": "The court dismissed the appeal due to a lack of credible evidence and inconsistencies in witness testimonies. The presence of a dispute between the parties and Natubhai's proximity to the scene were deemed insufficient to prove intent to commit murder.",
+    "case_index": 9,
+    "case_link": "https://indiankanoon.org/doc/120013452/",
+    "court": "Gujarat High Court",
+    "case_date": "",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "The State Of Gujarat vs Vajubhai Shambhubhai on 17 June, 2016",
+    "raw_response": "Signup Required\nPlease sign up to access this document's AI features.",
+    "error": "JSON parsing failed",
+    "case_index": 10,
+    "case_link": "https://indiankanoon.org/doc/94947591/",
+    "court": "Gujarat High Court",
+    "case_date": "17/06/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Ashokbhai Dahyabhai Patel vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Injuries sustained by the deceased, specifically noting the nature and extent of the wounds.",
+        "type": "physical",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Medical examination reports, forensic analysis of the deceased's body."
+      },
+      {
+        "evidence": "Eyewitness accounts detailing the altercation between the appellant and the deceased, describing the events leading up to the incident.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Testimony of witnesses present at the scene."
+      },
+      {
+        "evidence": "Forensic analysis confirming the cause of death as blunt force trauma consistent with a weapon.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Police forensic report."
+      },
+      {
+        "evidence": "The prosecution's argument centered on the appellant's intent to inflict grievous harm, arguing that the actions constituted murder under Section 300 of the IPC.",
+        "type": "argument",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Prosecution's closing arguments."
+      }
+    ],
+    "physical_evidence": [
+      "Weapon (unspecified - likely a blunt object)",
+      "Clothing of the appellant and deceased",
+      "Bloodstains and other forensic samples from the scene"
+    ],
+    "digital_evidence": [
+      "None explicitly mentioned in the summary"
+    ],
+    "witness_testimony": [
+      "Eyewitnesses reported a heated argument between the appellant and the deceased prior to the incident.",
+      "Potential inconsistencies in witness statements regarding the precise sequence of events."
+    ],
+    "forensic_evidence": [
+      "Analysis of the weapon used to inflict the injuries.",
+      "DNA evidence linking the appellant to the scene (if available)."
+    ],
+    "documentary_evidence": [
+      "Police reports",
+      "Medical records of the deceased",
+      "Statements of witnesses"
+    ],
+    "circumstantial_evidence": [
+      "The heated argument between the appellant and the deceased.",
+      "The nature of the injuries sustained by the deceased."
+    ],
+    "key_facts": [
+      "Ashokbhai Dahyabhai Patel was accused of causing the death of another individual.",
+      "The prosecution argued the death was a result of intent to inflict grievous harm."
+    ],
+    "legal_issues": [
+      "Determining whether the death constitutes murder (Section 300) or culpable homicide (Section 304), based on the presence or absence of intent.",
+      "Establishing the appellant's state of mind at the time of the incident."
+    ],
+    "outcome": "The appeal was partly allowed, and the original conviction of murder (Section 302) was altered to culpable homicide (Section 304(Part I)) due to a lack of premeditation.",
+    "summary": "Ashokbhai Dahyabhai Patel was convicted of culpable homicide (Section 304(Part I)) rather than murder (Section 302) based on the evidence presented, specifically the absence of premeditation and the circumstances surrounding the incident.",
+    "case_index": 11,
+    "case_link": "https://indiankanoon.org/doc/73251031/",
+    "court": "Gujarat High Court",
+    "case_date": "03/05/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "State Of Gujarat vs Mahmadakaram M ...",
+    "evidence_found": [
+      {
+        "evidence": "The prosecution presented evidence suggesting the accused acted with intent to cause grievous hurt, utilizing a sharp weapon (a knife) during the altercation.",
+        "type": "witness/circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Testimony of witnesses, circumstantial evidence of the injury sustained by the victim."
+      },
+      {
+        "evidence": "The prosecution argued that the accused's actions constituted a dangerous and unlawful assault, demonstrating a disregard for the safety of the victim.",
+        "type": "argumentative",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Prosecution's legal arguments and presentation of evidence."
+      },
+      {
+        "evidence": "The defense attempted to portray the incident as a spontaneous reaction to provocation, arguing that the victim initiated the aggression.",
+        "type": "argumentative",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Defense's legal arguments and presentation of evidence."
+      }
+    ],
+    "physical_evidence": [
+      "knife (used in the assault)",
+      "injuries sustained by the victim"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Testimony of the victim (describing the assault)",
+      "Testimony of witnesses present at the scene (describing the events leading up to and during the assault)",
+      "Potential testimony of other individuals involved"
+    ],
+    "forensic_evidence": [
+      "Analysis of the knife (fingerprints, DNA, blood samples)",
+      "Medical examination of the victim's injuries"
+    ],
+    "documentary_evidence": [
+      "Police reports",
+      "Medical records",
+      "Statements from witnesses"
+    ],
+    "circumstantial_evidence": [
+      "The nature of the altercation",
+      "The victim's injuries",
+      "The accused's behavior following the incident"
+    ],
+    "key_facts": [
+      "Mahmadakaram M was involved in an altercation with the victim.",
+      "A knife was used during the altercation, resulting in injuries to the victim."
+    ],
+    "legal_issues": [
+      "Assault and Battery (IPC Section 323)",
+      "Voluntary Hurt (IPC Section 322)",
+      "Intent to cause grievous hurt (IPC Section 325)",
+      "Proof of intent and provocation"
+    ],
+    "outcome": "The court found Mahmadakaram M guilty of assault and battery, resulting in injuries to the victim.",
+    "summary": "This case involved an altercation where a knife was used, resulting in injuries to the victim. The court determined that Mahmadakaram M acted with intent to cause grievous hurt, leading to his conviction for assault and battery.",
+    "case_index": 12,
+    "case_link": "https://indiankanoon.org/doc/153197949/",
+    "court": "Gujarat High Court",
+    "case_date": "04/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Ramanbhai Nanabhai Patel vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Oral testimony of the applicant, Mr. Y. M. Thakkar, arguing for bail based on the lack of intent and the absence of corroborating witness statements from the victim or complainant.",
+        "type": "witness testimony",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Applicant's counsel's arguments"
+      },
+      {
+        "evidence": "Reliance on the judgment of Parsuram Pandey and Ors. v. State of Bihar (AIR 2007 SC (Supp) 488) to argue that intent and knowledge are key elements of Section 307 and their absence weakens the prosecution's case.",
+        "type": "precedent",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Judicial Precedent"
+      },
+      {
+        "evidence": "Documentary evidence – Sessions Case No. 181 of 2013, relating to the charges against Ramanbhai Nanabhai Patel under Section 307 of the Indian Penal Code.",
+        "type": "documentary evidence",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court Records"
+      },
+      {
+        "evidence": "The prosecution's case, presented through the State's arguments, asserting that the applicant intended to cause grievous hurt.",
+        "type": "witness testimony",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Respondent's Arguments"
+      },
+      {
+        "evidence": "The judgment and order of the learned 3rd Additional Sessions Judge, Panchmahal at Godhra, convicting the applicant and sentencing him to RI for ten years and to pay a fine.",
+        "type": "documentary evidence",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Trial Court Order"
+      }
+    ],
+    "physical_evidence": [
+      "Injuries sustained by the victim (not explicitly detailed, but implied by the charges)",
+      "Weapon used (implied by the charge of attempt to murder)"
+    ],
+    "digital_evidence": [
+      "None explicitly mentioned in the text"
+    ],
+    "witness_testimony": [
+      "Testimony of the complainant (absent and uncorroborating)",
+      "Testimony of the victim (absent and uncorroborating)",
+      "Testimony of the applicant (Mr. Thakkar)"
+    ],
+    "forensic_evidence": [
+      "None explicitly mentioned in the text"
+    ],
+    "documentary_evidence": [
+      "Records related to the incident (not detailed)",
+      "Court documents pertaining to the case"
+    ],
+    "circumstantial_evidence": [
+      "Lack of corroborating evidence from the victim and complainant",
+      "The nature of the alleged act (attempt to cause grievous hurt)"
+    ],
+    "key_facts": [
+      "Ramanbhai Nanabhai Patel was charged with attempt to murder.",
+      "The prosecution argued that the applicant intended to cause grievous hurt."
+    ],
+    "legal_issues": [
+      "Interpretation of Section 307 of the Indian Penal Code (intent and knowledge)",
+      "Burden of proof on the prosecution"
+    ],
+    "outcome": "Application for bail allowed pending appeal.",
+    "summary": "The court allowed the applicant, Ramanbhai Nanabhai Patel, to be released on bail pending the hearing of his appeal, primarily due to the lack of corroborating evidence and the absence of a clear demonstration of intent from the prosecution.",
+    "case_index": 13,
+    "case_link": "https://indiankanoon.org/doc/196788972/",
+    "court": "Gujarat High Court",
+    "case_date": "15/09/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "State Of Gujarat vs Desai Jigishbhai @ Rajubhai Nagjibhai",
+    "evidence_found": [
+      {
+        "evidence": "The judgment discusses the potential for cancellation of bail based on the accused's abscondence and the court's power to protect public order and safety.",
+        "type": "legal/procedural",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Judicial reasoning and legal precedents"
+      },
+      {
+        "evidence": "The case involves a situation where the accused disappeared after being granted bail, raising concerns about potential disruption to public order.",
+        "type": "factual/circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court's observations regarding the accused's actions"
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [],
+    "forensic_evidence": [],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [
+      "The accused's abscondence constitutes circumstantial evidence suggesting a potential threat to public order.",
+      "The court's concern about maintaining public safety is a key factor in considering bail cancellation."
+    ],
+    "key_facts": [
+      "Desai Jigishbhai was granted bail.",
+      "He subsequently absconded, raising concerns about his intentions and potential disruption."
+    ],
+    "legal_issues": [
+      "Cancellation of bail due to abscondence.",
+      "The court's power to protect public order and safety.",
+      "The standard of proof required to justify bail cancellation."
+    ],
+    "outcome": "The court ordered the cancellation of bail and directed the accused to surrender before the Sessions Court.",
+    "summary": "This judgment addresses the situation where an individual granted bail absconds, leading the court to exercise its power to cancel the bail and ensure public safety. The core issue revolves around the court's authority to intervene when bail conditions are breached and public order is potentially threatened.",
+    "case_index": 14,
+    "case_link": "https://indiankanoon.org/doc/87693137/",
+    "court": "Gujarat High Court",
+    "case_date": "04/02/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Manu Golanbhai Khachar vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The prosecution's case relied heavily on circumstantial evidence, primarily focusing on the alleged motive of the accused and the opportunity to commit the crime.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Prosecution arguments and presented evidence"
+      },
+      {
+        "evidence": "FSL reports indicated the presence of the accused's fingerprints on the weapon used in the crime.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "FSL (Forensic Science Laboratory) reports"
+      },
+      {
+        "evidence": "Witness testimony placed the accused near the scene of the crime around the time of the incident.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Eyewitness accounts"
+      },
+      {
+        "evidence": "The prosecution presented evidence of a dispute between the victim and the accused regarding a business transaction.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Prosecution arguments and presented evidence"
+      }
+    ],
+    "physical_evidence": [
+      "Weapon (used in the crime)",
+      "Fingerprints (on the weapon)"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Eyewitness accounts placing the accused near the crime scene",
+      "Character witnesses (potentially relevant to assessing credibility)"
+    ],
+    "forensic_evidence": [
+      "Fingerprint analysis",
+      "Ballistics analysis (of the weapon)"
+    ],
+    "documentary_evidence": [
+      "Records of the business dispute",
+      "Any relevant documents pertaining to the victim and accused's relationship"
+    ],
+    "circumstantial_evidence": [
+      "Motive (business dispute)",
+      "Opportunity (presence near the crime scene)"
+    ],
+    "key_facts": [
+      "A dispute existed between the victim and the accused regarding a business transaction.",
+      "The accused was found to have fingerprints on the weapon used in the crime."
+    ],
+    "legal_issues": [
+      "Proof beyond a reasonable doubt (the central issue in the case)",
+      "Interpretation of circumstantial evidence"
+    ],
+    "outcome": "The appeal was allowed, and the conviction was set aside. The acquittal of the original accused nos. 1 to 3 was confirmed.",
+    "summary": "The judgment highlights the reliance on circumstantial evidence in the prosecution's case and the court's determination that the prosecution failed to prove the accused's guilt beyond a reasonable doubt. The key evidence included fingerprints on the weapon and witness testimony placing the accused near the crime scene, but the court found these insufficient to establish guilt.",
+    "case_index": 15,
+    "case_link": "https://indiankanoon.org/doc/84050438/",
+    "court": "Gujarat High Court",
+    "case_date": "29/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Vinodbhai Gagandas Vanjani &amp; 4 vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Narco analysis test and lie detector test",
+        "type": "forensic",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "requested by the accused"
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [],
+    "forensic_evidence": [],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [
+      "Circumstantial evidence based on a lapse of 10 days after a discovery/recovery"
+    ],
+    "key_facts": [
+      "Accused claims to be falsely involved in a case.",
+      "Case is based on circumstantial evidence with no direct eyewitness."
+    ],
+    "legal_issues": [
+      "Right to a fair trial under Article 21 of the Constitution.",
+      "Use of scientific evidence in criminal investigations."
+    ],
+    "outcome": "Partially allowed – The trial judge modified the order to allow the investigation to proceed with the narco analysis test and lie detector test.",
+    "summary": "The case involved an accused claiming to be falsely implicated in a murder case. The court, considering the accused's request and a ruling from the Supreme Court, allowed the investigation to proceed with the use of narco analysis and lie detector tests, directing the investigating officer to carry out the investigation accordingly.",
+    "case_index": 16,
+    "case_link": "https://indiankanoon.org/doc/136734453/",
+    "court": "Gujarat High Court",
+    "case_date": "03/05/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "State Of Gujarat vs Asgarali S/O Mohammad Ali",
+    "evidence_found": [
+      {
+        "evidence": "Similar and identical set of facts in both POTA Case No.10 of 2003 and POTA Case No.12 of 2003 regarding the conspiracy.",
+        "type": "circumstantial",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Identical factual basis in both trials"
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [],
+    "forensic_evidence": [],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [
+      "Identical factual basis suggesting a conspiracy.",
+      "The fact that the same accused were tried and convicted in one case, leading to the barring of a second trial based on the same facts."
+    ],
+    "key_facts": [
+      "The accused were charged with conspiracy under POTA.",
+      "The trial in POTA Case No.10 of 2003 resulted in conviction and sentencing."
+    ],
+    "legal_issues": [
+      "Application of Section 300 of the Criminal Procedure Code (CrPC) regarding the barring of subsequent trials based on identical facts leading to a conviction.",
+      "Issue of conspiracy and evidence required to prove it."
+    ],
+    "outcome": "The appeals were dismissed.",
+    "summary": "The Gujarat High Court dismissed the appeals against convictions and sentences of the accused in POTA Case No.12 of 2003, based on the identical factual basis established in POTA Case No.10 of 2003, leading to a conviction.  Section 300 of the CrPC prevented a second trial on the same charges.",
+    "case_index": 17,
+    "case_link": "https://indiankanoon.org/doc/145975627/",
+    "court": "Gujarat High Court",
+    "case_date": "30/03/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Samirbhai Madhukantbhai Shah vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Statements made available to the Court by the learned Public Prosecutor indicating the petitioner is yet to be arrested two months after the FIR was lodged and police officers are absconding.",
+        "type": "witness testimony",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Learned Public Prosecutor's statements"
+      },
+      {
+        "evidence": "Investigation at a crucial and initial stage where the petitioner is yet to be arrested.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court observation"
+      }
+    ],
+    "physical_evidence": [
+      "Weapons",
+      "Clothing",
+      "Biological samples (potentially related to the crime)"
+    ],
+    "digital_evidence": [
+      "Emails (potentially related to communication between involved parties)",
+      "Camera footage (potentially capturing relevant events)",
+      "Computer files (potentially containing evidence of planning or execution)"
+    ],
+    "witness_testimony": [
+      "Eyewitness accounts (if any, not explicitly mentioned in the provided text)",
+      "Expert testimony (potentially related to forensic analysis if conducted)"
+    ],
+    "forensic_evidence": [
+      "DNA analysis (if any physical evidence is collected)",
+      "Fingerprint analysis (if any physical evidence is collected)",
+      "Ballistics analysis (if a firearm is involved)"
+    ],
+    "documentary_evidence": [
+      "FIR (First Information Report)",
+      "Statements of witnesses",
+      "Any relevant documents related to the alleged crime"
+    ],
+    "circumstantial_evidence": [
+      "Motive (reason for the alleged crime - not explicitly stated)",
+      "Opportunity (time and location of the alleged crime)",
+      "Behavior patterns of the petitioner and other involved parties"
+    ],
+    "key_facts": [
+      "The petitioner is yet to be arrested two months after the FIR was lodged.",
+      "Police officers involved in the investigation are absconding."
+    ],
+    "legal_issues": [
+      "Section 438 of the Code of Criminal Procedure (regarding anticipatory bail)",
+      "Potential charges related to the alleged crime (not explicitly stated)"
+    ],
+    "outcome": "Application dismissed and rejected",
+    "summary": "The court, considering the ongoing investigation and the lack of arrest of the petitioner and involved police officers, denied the petitioner's request for anticipatory bail, finding it inappropriate to discuss the evidence in detail at this stage.",
+    "case_index": 18,
+    "case_link": "https://indiankanoon.org/doc/89401462/",
+    "court": "Gujarat High Court",
+    "case_date": "04/05/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Pinkiben W/O Harikesh Bharatlal Soni & 2 vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The prosecution presented evidence suggesting the applicants (Pinkiben and her husband) were involved in provoking the deceased to commit suicide. This included testimonies alleging heated arguments and threats.",
+        "type": "witness testimony",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Testimony of witnesses who observed the arguments and interactions between the parties."
+      },
+      {
+        "evidence": "There was no direct evidence linking the applicants to the act of instigation. The prosecution’s case relied heavily on circumstantial evidence and inferences drawn from the witnesses’ accounts.",
+        "type": "circumstantial evidence",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Analysis of the circumstances surrounding the deceased’s actions and the testimonies of witnesses."
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Testimony of neighbors who reported hearing arguments between Pinkiben and the deceased.",
+      "Testimony of relatives who described the strained relationship between the couple."
+    ],
+    "forensic_evidence": [],
+    "documentary_evidence": [],
+    "circumstantial_evidence": [
+      "The strained marital relationship between Pinkiben and the deceased.",
+      "The heated arguments and alleged threats reported by witnesses."
+    ],
+    "key_facts": [
+      "Pinkiben and the deceased were involved in a contentious marital relationship.",
+      "The deceased was found dead under suspicious circumstances."
+    ],
+    "legal_issues": [
+      "Abetment to suicide (Section 306 of the Indian Penal Code)",
+      "Establishing intent and proving instigation"
+    ],
+    "outcome": "The court quashed the charges against the applicants, finding that the prosecution failed to prove their involvement in abetting the suicide beyond a reasonable doubt. The court emphasized the reliance on circumstantial evidence and the lack of direct proof.",
+    "summary": "The court dismissed the charges against Pinkiben and her husband, finding that the prosecution's case was based primarily on circumstantial evidence and lacked sufficient proof to establish their involvement in inciting the deceased to commit suicide. The court highlighted the importance of direct evidence in such cases.",
+    "case_index": 19,
+    "case_link": "https://indiankanoon.org/doc/54085498/",
+    "court": "Gujarat High Court",
+    "case_date": "05/02/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Jagdishkumar Sankalchand Shah vs State Of Gujarat & 2",
+    "evidence_found": [
+      {
+        "evidence": "Circumstantial evidence linking the accused to the crime, primarily based on the ‘last seen together’ testimony and the absence of a clear alibi.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Trial court findings, witness statements, and legal arguments"
+      },
+      {
+        "evidence": "Witness testimony placing the accused in the vicinity of the crime scene around the time of the incident.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Eyewitness accounts presented during the trial"
+      },
+      {
+        "evidence": "Lack of a credible alibi presented by the accused.",
+        "type": "absence of evidence",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Prosecution's argument and defense's failure to provide an alternative explanation"
+      },
+      {
+        "evidence": "Forensic evidence (though not explicitly detailed in this excerpt) likely played a role in establishing the crime and potentially linking the accused to it.",
+        "type": "forensic",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Implied through the court's decision to overturn the acquittal"
+      }
+    ],
+    "physical_evidence": [
+      "Weapons (not explicitly mentioned, but likely considered in the investigation)",
+      "Clothing (potentially linked to the crime scene)",
+      "Biological samples (DNA evidence, if available)"
+    ],
+    "digital_evidence": [
+      "Emails and texts (if any communication related to the crime was uncovered)",
+      "Camera footage (from the crime scene or surrounding areas)"
+    ],
+    "witness_testimony": [
+      "Eyewitness accounts of the accused's presence near the crime scene",
+      "Expert testimony (likely related to forensic analysis and interpretation)"
+    ],
+    "forensic_evidence": [
+      "DNA analysis (if any evidence was collected)",
+      "Fingerprint analysis (if any evidence was collected)",
+      "Ballistics analysis (if a firearm was involved)"
+    ],
+    "documentary_evidence": [
+      "Police reports",
+      "Investigative records",
+      "Court documents"
+    ],
+    "circumstantial_evidence": [
+      "Motive (if established)",
+      "Opportunity (the accused's presence near the crime scene)",
+      "Behavior patterns (if any suspicious behavior was observed)"
+    ],
+    "key_facts": [
+      "The accused was last seen with the victim.",
+      "The accused lacked a verifiable alibi."
+    ],
+    "legal_issues": [
+      "Interpretation of circumstantial evidence",
+      "Burden of proof in criminal cases",
+      "Standard of proof required for conviction"
+    ],
+    "outcome": "Revision allowed; Order quashed and set aside; Trial Court directed to proceed afresh.",
+    "summary": "The court overturned the acquittal based on the compelling circumstantial evidence, primarily the ‘last seen together’ testimony and the absence of a credible alibi. The trial court was directed to conduct a fresh trial considering all available evidence and legal principles.",
+    "case_index": 20,
+    "case_link": "https://indiankanoon.org/doc/18581611/",
+    "court": "Gujarat High Court",
+    "case_date": "10/08/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Purshottambhai Premabhai Tandel & 13 vs The State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Contradictory testimonies of the complainant, Parshottambhai Tandel, regarding the events leading to the alleged assault and the identities of those present.",
+        "type": "witness",
+        "strength": "weak",
+        "relevance": "high",
+        "source": "Trial Court Record"
+      },
+      {
+        "evidence": "Medical reports indicating injuries sustained by the accused, suggesting a lack of direct involvement in a violent altercation.",
+        "type": "medical",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Medical Records"
+      },
+      {
+        "evidence": "Lack of conclusive forensic evidence linking the accused to the crime scene or the injuries.",
+        "type": "forensic",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Police Investigation Report"
+      }
+    ],
+    "physical_evidence": [
+      "Lathi (stick)",
+      "Potential weapons used in the altercation"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Testimony of Parshottambhai Tandel (complainant) – inconsistent and unreliable.",
+      "Testimony of other witnesses – corroborating the complainant’s version of events is lacking."
+    ],
+    "forensic_evidence": [],
+    "documentary_evidence": [
+      "Police reports",
+      "Case files",
+      "Statements of witnesses"
+    ],
+    "circumstantial_evidence": [
+      "Lack of a clear motive for the alleged assault.",
+      "Absence of direct evidence placing the accused at the scene."
+    ],
+    "key_facts": [
+      "The complainant, Parshottambhai Tandel, alleged an assault.",
+      "The prosecution failed to establish a clear chain of events and direct involvement of the accused."
+    ],
+    "legal_issues": [
+      "Establishing intent and culpability beyond a reasonable doubt.",
+      "Reliability of witness testimony and the admissibility of evidence."
+    ],
+    "outcome": "The Criminal Appeal is partly allowed. The impugned judgment and order dated 15.6.2005 passed by Sessions Judge, Navsari in Sessions Case No. 10 of 2005 is modified and accused nos. 2 and 7 are held guilty for offence punishable under Section 304, Part-I of the Indian Penal Code and ordered to undergo ten years’ rigorous imprisonment. The period of sentence already undergone by accused nos. 2 to 7 is given set off to them. Accused nos. 2 to 7 shall surrender before the jail authorities within a period of twelve weeks from today to serve out the remaining period of sentence.",
+    "summary": "The court found the prosecution unable to prove the guilt of the accused beyond a reasonable doubt due to inconsistencies in witness testimony and a lack of concrete evidence. The accused were convicted under Section 304 of the Indian Penal Code (culpable homicide) with a sentence of 10 years imprisonment.",
+    "case_index": 21,
+    "case_link": "https://indiankanoon.org/doc/173253763/",
+    "court": "Gujarat High Court",
+    "case_date": "21/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Swapnil Bhairawnath Dudhane vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The prosecution's case revolves around circumstantial evidence suggesting the deceased, Swapnil Bhairawnath Dudhane, was driven to suicide due to financial pressures and a strained relationship with his family, particularly his father, who allegedly made derogatory remarks about his profession and lifestyle.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Prosecution arguments and witness testimonies"
+      },
+      {
+        "evidence": "The defense argues that the prosecution's case is based solely on conjecture and lacks concrete proof of any malicious intent or coercion. They contend that Swapnil was struggling with personal issues and that the family’s actions, while perhaps insensitive, did not constitute a direct cause of his suicide.",
+        "type": "argumentative",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Defense arguments and cross-examination of witnesses"
+      },
+      {
+        "evidence": "Statements from neighbors regarding the deceased's demeanor and interactions with his family, indicating a sense of isolation and distress.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Witness testimonies"
+      }
+    ],
+    "physical_evidence": [],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Testimony of family members (father, mother) regarding their interactions with the deceased.",
+      "Testimony of neighbors regarding the deceased's behavior and relationships.",
+      "Potential forensic analysis of the deceased's electronic devices (if any) to uncover communications or browsing history."
+    ],
+    "forensic_evidence": [],
+    "documentary_evidence": [
+      "Financial records of the deceased (bank statements, loan applications) to assess his financial situation.",
+      "Communication records (emails, text messages) between the deceased and his family members.",
+      "Any relevant documents pertaining to his employment or business dealings."
+    ],
+    "circumstantial_evidence": [
+      "Financial difficulties experienced by the deceased.",
+      "Strained family relationships, particularly the alleged derogatory remarks made by his father.",
+      "The deceased's isolation and lack of social support."
+    ],
+    "key_facts": [
+      "Swapnil Bhairawnath Dudhane died by suicide.",
+      "The circumstances surrounding his death are disputed, with the prosecution arguing it was due to coercion and the defense claiming it was a result of personal struggles."
+    ],
+    "legal_issues": [
+      "Determination of whether the deceased's death was a suicide or a case of foul play (abetment or coercion).",
+      "Assessment of the evidence to determine if any party was responsible for contributing to the deceased's state of mind.",
+      "Application of relevant sections of the Indian Penal Code (IPC) concerning abetment, culpable homicide not amounting to murder, etc."
+    ],
+    "outcome": "Pending – Case is likely ongoing or awaiting a verdict based on the presented evidence.",
+    "summary": "This case involves a dispute over the cause of death of Swapnil Bhairawnath Dudhane, who died by suicide. The prosecution alleges that he was driven to suicide due to family pressure and financial difficulties, while the defense argues that it was a result of personal struggles and lacks evidence of coercion. The case hinges on the interpretation of circumstantial evidence and the credibility of witness testimonies.",
+    "case_index": 22,
+    "case_link": "https://indiankanoon.org/doc/104265472/",
+    "court": "Gujarat High Court",
+    "case_date": "",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Jigneshbhai @ Jago Bhikhubhai Jadav vs State Of Rajasthan",
+    "evidence_found": [
+      {
+        "evidence": "Testimony of child witnesses regarding the events leading up to the alleged assault.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Children's statements to police and court"
+      },
+      {
+        "evidence": "Forensic analysis of the victim's injuries, indicating a severe assault consistent with the charges.",
+        "type": "forensic",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Medical reports and forensic examination"
+      },
+      {
+        "evidence": "Confessional statements made by the appellant admitting to involvement in the incident.",
+        "type": "documentary",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Statements recorded by police"
+      },
+      {
+        "evidence": "Identification parade conducted to confirm the appellant's presence at the scene.",
+        "type": "witness/procedure",
+        "strength": "moderate",
+        "relevance": "medium",
+        "source": "Police procedure and witness identification"
+      }
+    ],
+    "physical_evidence": [
+      "None explicitly mentioned in the provided text.",
+      "Potential physical evidence related to the assault (e.g., clothing, weapons) would have been collected by the police but not detailed here."
+    ],
+    "digital_evidence": [
+      "Potential digital evidence (e.g., phone records, surveillance footage) would have been collected by the police but not detailed here."
+    ],
+    "witness_testimony": [
+      "Eyewitness accounts (if any) of the incident, though the text focuses on the children's testimonies.",
+      "Character witnesses (likely absent given the serious nature of the charges)."
+    ],
+    "forensic_evidence": [
+      "Analysis of the victim's injuries – the extent and nature of the injuries are crucial to the case."
+    ],
+    "documentary_evidence": [
+      "Police reports and investigation documents.",
+      "Medical records documenting the victim's injuries and treatment."
+    ],
+    "circumstantial_evidence": [
+      "Motive (if any) – the reason behind the alleged assault.",
+      "Opportunity – the appellant's presence at the scene of the crime."
+    ],
+    "key_facts": [
+      "The victim sustained severe injuries consistent with a violent assault.",
+      "The appellant admitted to involvement in the incident through confessional statements."
+    ],
+    "legal_issues": [
+      "Attempt to murder (Section 302 of the IPC)",
+      "Rape/Sexual Assault (Section 377 of the IPC)"
+    ],
+    "outcome": "Appeal allowed, charges quashed and the appellant acquitted.",
+    "summary": "The appellant was charged with attempted murder and rape. While the child witnesses provided crucial testimony and the appellant admitted to involvement, the court ultimately found the evidence insufficient to prove guilt beyond a reasonable doubt, leading to the acquittal.",
+    "case_index": 23,
+    "case_link": "https://indiankanoon.org/doc/115709397/",
+    "court": "Gujarat High Court",
+    "case_date": "01/04/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Samir @ Irfan Khurshid Alamkhan vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "Confessional statement of the accused (Samir @ Irfan Khurshid Alamkhan) regarding the crime.",
+        "type": "document",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Recorded confession during investigation"
+      },
+      {
+        "evidence": "Circumstantial evidence suggesting involvement in the crime (details not fully specified in this excerpt, but implied through the confession and investigation).",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Investigation and corroborating factors"
+      }
+    ],
+    "physical_evidence": [
+      "None explicitly mentioned in this excerpt"
+    ],
+    "digital_evidence": [
+      "None explicitly mentioned in this excerpt"
+    ],
+    "witness_testimony": [
+      "None explicitly mentioned in this excerpt"
+    ],
+    "forensic_evidence": [
+      "None explicitly mentioned in this excerpt"
+    ],
+    "documentary_evidence": [
+      "None explicitly mentioned in this excerpt"
+    ],
+    "circumstantial_evidence": [
+      "Motive (details not specified, but likely related to the crime)",
+      "Opportunity (details not specified, but likely related to the crime)"
+    ],
+    "key_facts": [
+      "The accused (Samir @ Irfan Khurshid Alamkhan) made a confession.",
+      "The confession was recorded under legal procedures (Section 164 of the Code of Criminal Procedure)."
+    ],
+    "legal_issues": [
+      "Admissibility of the confession under Section 164 of the Code of Criminal Procedure.",
+      "The court's assessment of the confession's credibility and the evidence supporting it."
+    ],
+    "outcome": "The Criminal Misc. Application was rejected. The accused was convicted based on the confession.",
+    "summary": "Samir @ Irfan Khurshid Alamkhan was convicted based on the confession he made, which was recorded in accordance with legal procedures. The court found the confession sufficient evidence to establish his involvement in the crime, despite the lack of explicit physical or digital evidence.",
+    "case_index": 24,
+    "case_link": "https://indiankanoon.org/doc/164603834/",
+    "court": "Gujarat High Court",
+    "case_date": "19/07/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Dhanjibhai Jadavjibhai Rathod vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The court considered the facts surrounding the death of the boy, Dhanjibhai Jadavjibhai Rathod, and the subsequent investigation by the police. The investigation focused on determining if the actions of the accused constituted culpable homicide under Section 304 of the Indian Penal Code.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Court proceedings and police investigation reports"
+      },
+      {
+        "evidence": "Witness testimonies were crucial in establishing the sequence of events leading to the boy's death. The testimonies were analyzed to determine if the accused acted with negligence or recklessness.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Witness statements recorded during the investigation"
+      },
+      {
+        "evidence": "Forensic analysis, if conducted, would have been relevant to determine the cause of death and whether the death was due to negligence or a deliberate act.",
+        "type": "forensic",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Hypothetical forensic reports (not explicitly mentioned in the provided text)"
+      }
+    ],
+    "physical_evidence": [
+      "The boy's body",
+      "Any objects involved in the incident (if identified)"
+    ],
+    "digital_evidence": [
+      "Mobile phone records of the accused (if available)",
+      "CCTV footage from the area (if available)"
+    ],
+    "witness_testimony": [
+      "Statements from family members of the deceased",
+      "Statements from neighbors who witnessed the incident",
+      "Statements from the accused themselves"
+    ],
+    "forensic_evidence": [
+      "Autopsy report (if conducted)",
+      "Analysis of any injuries sustained by the boy"
+    ],
+    "documentary_evidence": [
+      "Police investigation reports",
+      "Statements of witnesses",
+      "Any relevant documents pertaining to the incident"
+    ],
+    "circumstantial_evidence": [
+      "The accused's motive (if established)",
+      "The accused's opportunity to commit the act",
+      "The accused's behavior before and after the incident"
+    ],
+    "key_facts": [
+      "A boy, Dhanjibhai Jadavjibhai Rathod, died.",
+      "The death was investigated by the police."
+    ],
+    "legal_issues": [
+      "Culpable homicide (Section 304 of the Indian Penal Code)",
+      "Negligence or recklessness",
+      "Establishing the sequence of events"
+    ],
+    "outcome": "The outcome of the case is not explicitly stated in the provided text. The text focuses on the legal principles and evidence considered during the investigation.",
+    "summary": "This case involves the investigation into the death of a boy and the application of Section 304 of the Indian Penal Code, which deals with culpable homicide. The court would have considered various forms of evidence, including witness testimony, circumstantial evidence, and potentially forensic evidence, to determine if the accused was responsible for the boy's death.",
+    "case_index": 25,
+    "case_link": "https://indiankanoon.org/doc/27629566/",
+    "court": "Gujarat High Court",
+    "case_date": "11/07/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Punabhai Rambhai Jogasva vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "FIR being I-CR NO. 132 of 2016 registered with Gondal City Police Station, District: Rajkot (Rural) – details of the alleged offenses (302, 307, 506(2), 120(b) and 34 of the Indian Penal Code, Section 25 (1-B), A and 27 of the Arms Act and Section 135 of the Gujarat Police Act)",
+        "type": "documentary",
+        "strength": "high",
+        "relevance": "high",
+        "source": "Police FIR records"
+      },
+      {
+        "evidence": "Statements of employees working with the applicant, specifically regarding Haneef being harbored.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Police investigation – employee statements"
+      },
+      {
+        "evidence": "Statement of Haneef dated 12.09.2016",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Police investigation – Haneef's statement"
+      },
+      {
+        "evidence": "Applicant's actions of allowing Haneef to stay at his farm-house",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Police investigation – observation of the applicant's actions"
+      }
+    ],
+    "physical_evidence": [
+      "Weapons (potentially, if involved in the alleged murder)",
+      "Clothing (of the accused and applicant)",
+      "Biological samples (DNA evidence, if available)"
+    ],
+    "digital_evidence": [
+      "Emails (if any related to the case)",
+      "Computer files (if any related to the case)"
+    ],
+    "witness_testimony": [
+      "Eyewitness accounts (if any)",
+      "Expert testimony (e.g., forensic experts)",
+      "Character witnesses (potentially)"
+    ],
+    "forensic_evidence": [
+      "DNA analysis (of any recovered evidence)",
+      "Fingerprint analysis (of relevant objects)",
+      "Ballistics analysis (if firearms were involved)",
+      "Toxicology analysis (if poisoning was suspected)"
+    ],
+    "documentary_evidence": [
+      "FIR documents",
+      "Police reports",
+      "Court documents",
+      "Any relevant contracts or agreements🐵"
+    ],
+    "circumstantial_evidence": [
+      "Motive (if established)",
+      "Opportunity (if the applicant was present at the scene)",
+      "Behavior patterns (of the applicant or other involved parties)"
+    ],
+    "key_facts": [
+      "The applicant allowed a suspect (Haneef) to stay at his residence.",
+      "The suspect is implicated in the alleged crime."
+    ],
+    "legal_issues": [
+      "Establishing the applicant's involvement in the crime.",
+      "Determining the credibility of witness testimony."
+    ],
+    "outcome": "Pending (as of this analysis - the case outcome is not provided)",
+    "summary": "This case involves an investigation into alleged criminal activity, with the applicant being connected to a suspect involved in the crime. The investigation relies heavily on witness statements and circumstantial evidence.",
+    "case_index": 26,
+    "case_link": "https://indiankanoon.org/doc/33341542/",
+    "court": "Gujarat High Court",
+    "case_date": "29/12/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Dharmesh @ Bhodi Raijibhai Patel vs State Of Gujarat",
+    "evidence_found": [
+      {
+        "evidence": "The police's reliance on the 'inquest panchnama' and the detailed description of the applicant's involvement as 'absconding' in the charge sheet.",
+        "type": "documentary",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Charge sheet and Inquest Panchnama"
+      },
+      {
+        "evidence": "The charge sheet highlighting the applicant's involvement with other accused individuals in the alleged offenses.",
+        "type": "documentary",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Charge sheet"
+      },
+      {
+        "evidence": "The fact that the applicant was shown to be absconding.",
+        "type": "circumstantial",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Charge sheet"
+      }
+    ],
+    "physical_evidence": [
+      "Motorcycle bike alleged to have been used by the applicant to complete the chain of events"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [],
+    "forensic_evidence": [],
+    "documentary_evidence": [
+      "Charge sheet",
+      "Inquest Panchnama"
+    ],
+    "circumstantial_evidence": [
+      "Applicant's absconding status",
+      "Applicant's involvement with other accused individuals"
+    ],
+    "key_facts": [
+      "The applicant is accused of offenses related to a chain of events.",
+      "The police believe the applicant absconded."
+    ],
+    "legal_issues": [
+      "Granting anticipatory bail",
+      "Determining the applicant's involvement in the alleged offenses"
+    ],
+    "outcome": "The court rejected the successive anticipatory bail application.",
+    "summary": "The court denied the applicant's request for anticipatory bail, citing the detailed evidence in the charge sheet indicating his involvement in the alleged offenses and his absconding status. The court deemed the application unnecessary based on the presented evidence.",
+    "case_index": 27,
+    "case_link": "https://indiankanoon.org/doc/193866485/",
+    "court": "Gujarat High Court",
+    "case_date": "05/08/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "State Of Gujarat vs Dinesh Jivabhai Gagiya &amp; ...",
+    "evidence_found": [
+      {
+        "evidence": "Injury on the person of the complainant, found to be in the nature of self infliction.",
+        "type": "physical",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Doctor's report"
+      },
+      {
+        "evidence": "Lack of direct evidence linking the accused to the crime.",
+        "type": "circumstantial",
+        "strength": "strong",
+        "relevance": "high",
+        "source": "Court's analysis of the case"
+      }
+    ],
+    "physical_evidence": [
+      "None explicitly mentioned in the text."
+    ],
+    "digital_evidence": [
+      "None explicitly mentioned in the text."
+    ],
+    "witness_testimony": [
+      "Complainant's testimony (implied, suggesting self-inflicted injury)"
+    ],
+    "forensic_evidence": [
+      "None explicitly mentioned in the text."
+    ],
+    "documentary_evidence": [
+      "None explicitly mentioned in the text."
+    ],
+    "circumstantial_evidence": [
+      "The complainant's actions suggest an attempt to frame the accused.",
+      "The timing of the complaint suggests an attempt to deflect blame."
+    ],
+    "key_facts": [
+      "The complainant suffered an injury.",
+      "There was no direct evidence linking the accused to the injury or the original crime."
+    ],
+    "legal_issues": [
+      "Establishing criminal liability based on insufficient evidence.",
+      "The burden of proof rests on the prosecution."
+    ],
+    "outcome": "acquittal",
+    "summary": "The court acquitted the accused based on the lack of sufficient evidence directly linking them to the injury and the original crime. The complainant's actions and the circumstances surrounding the case suggested an attempt to frame the accused.",
+    "case_index": 28,
+    "case_link": "https://indiankanoon.org/doc/32739001/",
+    "court": "Gujarat High Court",
+    "case_date": "13/06/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  },
+  {
+    "case_title": "Mahendrasinh Pratapsinh Thakur vs State Of Gujarat & 3",
+    "evidence_found": [
+      {
+        "evidence": "Minimal damage to the motorcycle, photographs showing no damage.",
+        "type": "physical",
+        "strength": "weak",
+        "relevance": "high",
+        "source": "Photographs of the accident scene"
+      },
+      {
+        "evidence": "Statements of three persons travelling on the motorcycle.",
+        "type": "witness",
+        "strength": "moderate",
+        "relevance": "high",
+        "source": "Police investigation records"
+      },
+      {
+        "evidence": "Statements regarding the deceased being taken to the hospital by rickshaw.",
+        "type": "witness",
+        "strength": "weak",
+        "relevance": "medium",
+        "source": "Police investigation records"
+      }
+    ],
+    "physical_evidence": [
+      "Motorcycle",
+      "Injuries sustained by the deceased"
+    ],
+    "digital_evidence": [],
+    "witness_testimony": [
+      "Statements of the three persons travelling on the motorcycle"
+    ],
+    "forensic_evidence": [],
+    "documentary_evidence": [
+      "FIR report",
+      "Police investigation records"
+    ],
+    "circumstantial_evidence": [
+      "Lack of damage to the motorcycle",
+      "Unexplained absence of injuries to other passengers"
+    ],
+    "key_facts": [
+      "Three persons were travelling on the motorcycle when the accident occurred.",
+      "The deceased sustained injuries and was taken to the hospital by the other two passengers."
+    ],
+    "legal_issues": [
+      "Determining the nature of the accident (accidental death vs. homicide)",
+      "Establishing the sequence of events and potential negligence"
+    ],
+    "outcome": "Application disposed of, directing the C.I.D. Crime to take over the investigation.",
+    "summary": "The court found the initial investigation lacking and ordered the Criminal Investigation Department (CID) to take over the case, particularly due to the unusual circumstances surrounding the accident and the lack of clear evidence of an accidental death. The court's concern was that the case might be a homicide and required a more thorough investigation.",
+    "case_index": 29,
+    "case_link": "https://indiankanoon.org/doc/24038305/",
+    "court": "Gujarat High Court",
+    "case_date": "21/01/2016",
+    "year": "2016",
+    "period": "Entire Year",
+    "keyword": "murder"
+  }
+]
