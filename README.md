@@ -4,9 +4,11 @@
 
 Forensic-LLM combines web scraping with AI-powered analysis to help legal researchers, lawyers, and forensic analysts efficiently extract and analyze evidence from Indian court judgments.
 
+![Forensic LLM](img/forensic-llm.jpg)
+
 ---
 
-##  What This Project Does
+## 🎯 What This Project Does
 
 Forensic-LLM is a comprehensive tool with two integrated components:
 
@@ -15,17 +17,17 @@ Forensic-LLM is a comprehensive tool with two integrated components:
 
 ### Key Features
 
--  **Beautiful Interactive CLI** - Rich terminal UI with tables, progress bars, and color-coded output
--  **Smart Case Discovery** - Automatically discovers available courts, years, and periods
--  **Multi-page Scraping** - Scrapes multiple pages of search results with progress tracking
--  **AI-Powered Analysis** - Extracts evidence using local LLM (Ollama) - no cloud API required
--  **Integrated Workflow** - Optionally runs evidence extraction automatically after scraping
--  **Progress Saving** - Auto-saves progress every 5 cases (resume anytime)
--  **Structured Output** - Clean JSON format for easy integration with other tools
+- 🎨 **Beautiful Interactive CLI** - Rich terminal UI with tables, progress bars, and color-coded output
+- 🔍 **Smart Case Discovery** - Automatically discovers available courts, years, and periods
+- 📊 **Multi-page Scraping** - Scrapes multiple pages of search results with progress tracking
+- 🤖 **AI-Powered Analysis** - Extracts evidence using local LLM (Ollama) - no cloud API required
+- 🔄 **Integrated Workflow** - Optionally runs evidence extraction automatically after scraping
+- 💾 **Progress Saving** - Auto-saves progress every 5 cases (resume anytime)
+- 📁 **Structured Output** - Clean JSON format for easy integration with other tools
 
 ---
 
-##  Table of Contents
+## 📋 Table of Contents
 
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
@@ -40,7 +42,7 @@ Forensic-LLM is a comprehensive tool with two integrated components:
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
 
 ```
 Forensic LLM Working/
@@ -63,7 +65,7 @@ Forensic LLM Working/
 
 ---
 
-##  Prerequisites
+## 🔧 Prerequisites
 
 Before installing Forensic-LLM, ensure you have:
 
@@ -87,7 +89,7 @@ Before installing Forensic-LLM, ensure you have:
 
 ---
 
-##  Installation
+## 📦 Installation
 
 ### Step 1: Download/Clone the Project
 
@@ -139,7 +141,7 @@ You should see a welcome banner and the interactive menu should start.
 
 ---
 
-##  Quick Start
+## 🚀 Quick Start
 
 ### Method 1: Using the CLI Command (Recommended)
 
@@ -160,7 +162,7 @@ python browse_scraper.py
 
 ---
 
-##  Usage Guide
+## 📖 Usage Guide
 
 ### Interactive Workflow
 
@@ -171,30 +173,46 @@ When you run `forensic-llm`, you'll be guided through an interactive process:
 - Choose from Supreme Court or High Courts
 - A beautiful table displays all options with numbers
 
+![Select a Court](img/Select a Court.jpg)
+
 #### Step 2: Select Year (Optional)
 - Browse available years for the selected court
 - Press Enter to skip and scrape all years
 - Years are displayed in a formatted table
+
+![Select Year](img/Select Year.jpg)
 
 #### Step 3: Select Period (Optional)
 - If a year is selected, choose a specific month or "Entire Year"
 - Press Enter to skip and scrape the entire year
 - Useful for targeted searches
 
+![Select Period](img/Select Period.jpg)
+
 #### Step 4: Enter Search Keyword
 - Enter a keyword to search for (e.g., "murder", "rape", "robbery")
 - The tool builds a search query automatically
 - Shows you the search URL before proceeding
+
+![Enter Search Keyword](img/Enter Search Keyword.jpg)
 
 #### Step 5: Choose Pages to Scrape
 - The tool inspects search results and shows total pages/cases
 - Enter how many pages you want to scrape
 - Progress is tracked with a live progress bar
 
+![Choose Pages to Scrape](img/Choose Pages to Scrape.jpg)
+
 #### Step 6: Automatic Evidence Extraction (Optional)
 - After scraping completes, you'll be asked if you want to extract evidence
 - If yes, the AI analysis starts automatically
 - No need to run a separate command!
+
+![Automatic Evidence Extraction](img/Automatic Evidence Extraction.jpg)
+
+![Forensic LLM Running](img/forensic-llm-running.jpg)
+
+![Scraping Complete](img/Scraping-Complete.jpg)
 
 ### Manual Evidence Extraction
 
@@ -218,7 +236,7 @@ python evidence_extractor.py --json "Extractor/raw output/your_file.json"
 
 ---
 
-##  Command Line Options
+## ⚙️ Command Line Options
 
 ### Evidence Extractor Options
 
@@ -257,7 +275,7 @@ python evidence_extractor.py --csv "cases.csv" --max-cases 20
 
 ---
 
-##  Output Format
+## 📄 Output Format
 
 ### Scraped Cases (JSON)
 
@@ -283,6 +301,8 @@ Each case in the scraped JSON file includes:
 - `case_link` - URL to the case on Indian Kanoon
 - `case_content` - Full text of the judgment
 - `year`, `period`, `keyword` - Search filters used
+
+![Raw Output Format](img/Output Format-Raw.jpg)
 
 ### Extracted Evidence (JSON)
 
@@ -317,9 +337,11 @@ Each case analysis includes structured evidence:
 }
 ```
 
+![Final Output Format](img/Output Format-Final.jpg)
+
 ---
 
-##  System Requirements
+## 💻 System Requirements
 
 ### Minimum Requirements
 
@@ -349,7 +371,7 @@ All required packages are listed in `requirements.txt` and installed automatical
 
 ---
 
-##  Advanced Usage
+## 🔬 Advanced Usage
 
 ### Running on Different PCs
 
@@ -416,7 +438,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 
 ---
 
-##  Troubleshooting
+## 🛠️ Troubleshooting
 
 ### Common Issues
 
@@ -493,7 +515,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 
 ---
 
-##  Important Notes
+## 📝 Important Notes
 
 - **Website Delays**: The scraper includes delays to respect the website and avoid overloading servers
 - **Progress Saving**: Evidence extraction saves progress every 5 cases, so you can stop and resume
@@ -505,7 +527,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 
 ---
 
-##  Support
+## 🆘 Support
 
 For issues or questions:
 
@@ -517,13 +539,13 @@ For issues or questions:
 
 ---
 
-##  License
+## 📄 License
 
 This project is provided as-is for educational and research purposes. Please respect the terms of service of Indian Kanoon when using this tool.
 
 ---
 
-##  Acknowledgments
+## 🙏 Acknowledgments
 
 - **Indian Kanoon** - For providing access to legal case data
 - **Ollama** - For providing local LLM capabilities
