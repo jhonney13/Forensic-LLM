@@ -6,7 +6,7 @@ Forensic-LLM combines web scraping with AI-powered analysis to help legal resear
 
 ---
 
-## 🎯 What This Project Does
+##  What This Project Does
 
 Forensic-LLM is a comprehensive tool with two integrated components:
 
@@ -15,17 +15,17 @@ Forensic-LLM is a comprehensive tool with two integrated components:
 
 ### Key Features
 
-- 🎨 **Beautiful Interactive CLI** - Rich terminal UI with tables, progress bars, and color-coded output
-- 🔍 **Smart Case Discovery** - Automatically discovers available courts, years, and periods
-- 📊 **Multi-page Scraping** - Scrapes multiple pages of search results with progress tracking
-- 🤖 **AI-Powered Analysis** - Extracts evidence using local LLM (Ollama) - no cloud API required
-- 🔄 **Integrated Workflow** - Optionally runs evidence extraction automatically after scraping
-- 💾 **Progress Saving** - Auto-saves progress every 5 cases (resume anytime)
-- 📁 **Structured Output** - Clean JSON format for easy integration with other tools
+-  **Beautiful Interactive CLI** - Rich terminal UI with tables, progress bars, and color-coded output
+-  **Smart Case Discovery** - Automatically discovers available courts, years, and periods
+-  **Multi-page Scraping** - Scrapes multiple pages of search results with progress tracking
+-  **AI-Powered Analysis** - Extracts evidence using local LLM (Ollama) - no cloud API required
+-  **Integrated Workflow** - Optionally runs evidence extraction automatically after scraping
+-  **Progress Saving** - Auto-saves progress every 5 cases (resume anytime)
+-  **Structured Output** - Clean JSON format for easy integration with other tools
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
@@ -40,7 +40,7 @@ Forensic-LLM is a comprehensive tool with two integrated components:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Forensic LLM Working/
@@ -63,7 +63,7 @@ Forensic LLM Working/
 
 ---
 
-## 🔧 Prerequisites
+##  Prerequisites
 
 Before installing Forensic-LLM, ensure you have:
 
@@ -87,7 +87,7 @@ Before installing Forensic-LLM, ensure you have:
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### Step 1: Download/Clone the Project
 
@@ -139,7 +139,7 @@ You should see a welcome banner and the interactive menu should start.
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Method 1: Using the CLI Command (Recommended)
 
@@ -159,7 +159,7 @@ python browse_scraper.py
 ```
 ---
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### Interactive Workflow
 
@@ -235,7 +235,7 @@ python evidence_extractor.py --json "Extractor/raw output/your_file.json"
 
 ---
 
-## ⚙️ Command Line Options
+##  Command Line Options
 
 ### Evidence Extractor Options
 
@@ -274,7 +274,7 @@ python evidence_extractor.py --csv "cases.csv" --max-cases 20
 
 ---
 
-## 📄 Output Format
+##  Output Format
 
 ### Scraped Cases (JSON)
 
@@ -301,7 +301,7 @@ Each case in the scraped JSON file includes:
 - `case_content` - Full text of the judgment
 - `year`, `period`, `keyword` - Search filters used
 
-![Raw Output Format](img/Output Format-Raw.jpg)
+![Raw Output Format](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Output%20Format-Raw.jpg)
 
 ### Extracted Evidence (JSON)
 
@@ -336,11 +336,11 @@ Each case analysis includes structured evidence:
 }
 ```
 
-![Final Output Format](img/Output Format-Final.jpg)
+![Final Output Format](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Output%20Format-Final.jpg)
 
 ---
 
-## 💻 System Requirements
+##  System Requirements
 
 ### Minimum Requirements
 
