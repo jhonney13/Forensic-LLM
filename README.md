@@ -212,11 +212,8 @@ When you run `forensic-llm`, you'll be guided through an interactive process:
 - If yes, the AI analysis starts automatically
 - No need to run a separate command!
 
-![Automatic Evidence Extraction](img/Automatic Evidence Extraction.jpg)
+![Automatic Evidence Extraction](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Automatic%20Evidence%20Extraction.jpg)
 
-![Forensic LLM Running](img/forensic-llm-running.jpg)
-
-![Scraping Complete](img/Scraping-Complete.jpg)
 
 ### Manual Evidence Extraction
 
