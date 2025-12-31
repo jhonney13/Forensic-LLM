@@ -4,8 +4,6 @@
 
 Forensic-LLM combines web scraping with AI-powered analysis to help legal researchers, lawyers, and forensic analysts efficiently extract and analyze evidence from Indian court judgments.
 
-![Forensic LLM](img/forensic-llm.jpg)
-
 ---
 
 ## 🎯 What This Project Does
