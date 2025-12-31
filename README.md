@@ -191,7 +191,7 @@ When you run `forensic-llm`, you'll be guided through an interactive process:
 - Press Enter to skip and scrape the entire year
 - Useful for targeted searches
 
-![Select Period](img/Select Period.jpg)
+![Select Period](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Select%20Period.jpg)
 
 #### Step 4: Enter Search Keyword
 - Enter a keyword to search for (e.g., "murder", "rape", "robbery")
