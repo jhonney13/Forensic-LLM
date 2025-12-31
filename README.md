@@ -1,5 +1,7 @@
-<img src="https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm%20(1).jpg" />
 # Forensic-LLM
+
+<img src="https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm%20(1).jpg" />
+
 
 **An AI-powered CLI tool for scraping legal cases from Indian Kanoon and extracting evidence using local LLMs.**
 
