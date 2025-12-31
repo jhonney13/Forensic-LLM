@@ -301,7 +301,6 @@ Each case in the scraped JSON file includes:
 - `case_content` - Full text of the judgment
 - `year`, `period`, `keyword` - Search filters used
 
-![Raw Output Format](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Output%20Format-Raw.jpg)
 
 ### Extracted Evidence (JSON)
 
@@ -335,8 +334,6 @@ Each case analysis includes structured evidence:
   "summary": "Brief summary"
 }
 ```
-
-![Final Output Format](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Output%20Format-Final.jpg)
 
 ---
 
