@@ -198,7 +198,7 @@ When you run `forensic-llm`, you'll be guided through an interactive process:
 - The tool builds a search query automatically
 - Shows you the search URL before proceeding
 
-![Enter Search Keyword](img/Enter Search Keyword.jpg)
+![Enter Search Keyword](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Enter%20Search%20Keyword.jpg)
 
 #### Step 5: Choose Pages to Scrape
 - The tool inspects search results and shows total pages/cases
