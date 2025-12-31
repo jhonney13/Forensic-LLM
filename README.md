@@ -167,6 +167,7 @@ python browse_scraper.py
 
 
 When you run `forensic-llm`, you'll be guided through an interactive process:
+
 ![Forensic LLM](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm-running.jpg)
 
 
