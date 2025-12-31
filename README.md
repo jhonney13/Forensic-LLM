@@ -205,7 +205,7 @@ When you run `forensic-llm`, you'll be guided through an interactive process:
 - Enter how many pages you want to scrape
 - Progress is tracked with a live progress bar
 
-![Choose Pages to Scrape](img/Choose Pages to Scrape.jpg)
+![Choose Pages to Scrape](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Choose%20Pages%20to%20Scrape.jpg)
 
 #### Step 6: Automatic Evidence Extraction (Optional)
 - After scraping completes, you'll be asked if you want to extract evidence
