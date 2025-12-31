@@ -179,14 +179,12 @@ When you run `forensic-llm`, you'll be guided through an interactive process:
 
 ![Select a Court](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Select%20a%20Court.jpg)
 
-![Select a Court](img/Select a Court.jpg)
-
 #### Step 2: Select Year (Optional)
 - Browse available years for the selected court
 - Press Enter to skip and scrape all years
 - Years are displayed in a formatted table
 
-![Select Year](img/Select Year.jpg)
+![Select Year](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Select%20Year.jpg)
 
 #### Step 3: Select Period (Optional)
 - If a year is selected, choose a specific month or "Entire Year"
