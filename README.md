@@ -165,17 +165,18 @@ python browse_scraper.py
 
 ### Interactive Workflow
 
+
+When you run `forensic-llm`, you'll be guided through an interactive process:
 ![Forensic LLM](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm-running.jpg)
 
 
-When you run `forensic-llm`, you'll be guided through an interactive process:
-
-![Select a Court](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Select%20a%20Court.jpg)
 
 #### Step 1: Select a Court
 - The tool automatically discovers all available courts from Indian Kanoon
 - Choose from Supreme Court or High Courts
 - A beautiful table displays all options with numbers
+
+![Select a Court](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Select%20a%20Court.jpg)
 
 ![Select a Court](img/Select a Court.jpg)
 
