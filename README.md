@@ -139,7 +139,7 @@ You should see a welcome banner and the interactive menu should start.
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Method 1: Using the CLI Command (Recommended)
 
@@ -160,7 +160,7 @@ python browse_scraper.py
 
 ---
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### Interactive Workflow
 
