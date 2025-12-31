@@ -159,7 +159,6 @@ If you prefer not to install the command:
 cd "C:\Forensic LLM\Forensic LLM Working\Extractor"
 python browse_scraper.py
 ```
-
 ---
 
 ## 📖 Usage Guide
@@ -170,6 +169,8 @@ python browse_scraper.py
 
 
 When you run `forensic-llm`, you'll be guided through an interactive process:
+
+![Select a Court](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Select%20a%20Court.jpg)
 
 #### Step 1: Select a Court
 - The tool automatically discovers all available courts from Indian Kanoon
