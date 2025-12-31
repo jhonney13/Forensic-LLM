@@ -2,6 +2,8 @@ import re
 import time
 import json
 import os
+import warnings
+import sys
 from typing import List, Dict
 from urllib.parse import quote_plus
 
@@ -10,12 +12,54 @@ from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 
+# Suppress cleanup warnings from undetected_chromedriver
+warnings.filterwarnings("ignore", category=ResourceWarning)
+
+# Monkey-patch Chrome.__del__ to suppress Windows handle errors during garbage collection
+try:
+    _original_chrome_del = uc.Chrome.__del__
+    
+    def _suppressed_chrome_del(self):
+        """Suppress OSError during Chrome driver cleanup to prevent 'Exception ignored' messages."""
+        try:
+            _original_chrome_del(self)
+        except OSError:
+            # Suppress Windows handle errors - these are harmless cleanup issues
+            pass
+        except Exception:
+            # Suppress all other cleanup errors
+            pass
+    
+    uc.Chrome.__del__ = _suppressed_chrome_del
+except (AttributeError, TypeError):
+    # If __del__ doesn't exist or can't be patched, that's okay
+    pass
+
+# Custom stderr filter to suppress "Exception ignored" messages from Chrome driver cleanup
+# These messages are printed directly by Python's garbage collector
+_original_stderr_write = sys.stderr.write
+
+def _filtered_stderr_write(text):
+    """Filter out Chrome driver cleanup error messages while preserving other output."""
+    # Only suppress the specific "Exception ignored" messages from Chrome.__del__
+    if isinstance(text, str):
+        if "Exception ignored" in text:
+            # Check if it's from Chrome.__del__ and involves OSError with invalid handle
+            if "Chrome.__del__" in text or "undetected_chromedriver" in text:
+                if "OSError" in text and ("WinError 6" in text or "handle is invalid" in text or "The handle is invalid" in text):
+                    return  # Suppress this specific cleanup error
+    # Write all other messages normally (including Rich console output)
+    _original_stderr_write(text)
+
+# Apply the filter to suppress cleanup errors
+sys.stderr.write = _filtered_stderr_write
+
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn, TaskProgressColumn
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
-from rich.prompt import Prompt, IntPrompt
+from rich.prompt import Prompt, IntPrompt, Confirm
 from rich import box
 from rich.live import Live
 from rich.align import Align
@@ -23,10 +67,70 @@ from rich.align import Align
 
 # ------------- CONFIG -------------
 
-# Initialize Rich console
+# Theme configuration
+THEMES = {
+    "dark": {
+        "primary": "cyan",
+        "success": "green",
+        "warning": "yellow",
+        "error": "red",
+        "info": "blue",
+        "accent": "magenta",
+        "panel_style": "cyan",
+        "table_style": "bold cyan",
+    },
+    "light": {
+        "primary": "blue",
+        "success": "green",
+        "warning": "yellow",
+        "error": "red",
+        "info": "cyan",
+        "accent": "magenta",
+        "panel_style": "blue",
+        "table_style": "bold blue",
+    },
+    "colorful": {
+        "primary": "bright_cyan",
+        "success": "bright_green",
+        "warning": "bright_yellow",
+        "error": "bright_red",
+        "info": "bright_blue",
+        "accent": "bright_magenta",
+        "panel_style": "bright_cyan",
+        "table_style": "bold bright_cyan",
+    },
+    "minimal": {
+        "primary": "white",
+        "success": "green",
+        "warning": "yellow",
+        "error": "red",
+        "info": "white",
+        "accent": "white",
+        "panel_style": "white",
+        "table_style": "bold white",
+    }
+}
+
+# Default theme (can be changed)
+DEFAULT_THEME = "dark"
+current_theme = THEMES[DEFAULT_THEME]
+
+# Initialize Rich console with theme
 console = Console()
 
 BASE_BROWSE_URL = "https://indiankanoon.org/browse/"
+
+def set_theme(theme_name: str = None):
+    """Set the UI theme. Options: dark, light, colorful, minimal"""
+    global current_theme
+    if theme_name and theme_name in THEMES:
+        current_theme = THEMES[theme_name]
+        return True
+    return False
+
+def get_style(category: str) -> str:
+    """Get style string for a category based on current theme"""
+    return current_theme.get(category, "white")
 
 # How many case links to follow from the court page (None = all on first page)
 MAX_CASES = 20
@@ -52,33 +156,86 @@ def get_driver() -> uc.Chrome:
     return driver
 
 
-def wait_for_cloudflare(driver, max_wait: int = CF_MAX_WAIT, show_status: bool = True) -> bool:
-    """Wait for Cloudflare / intermediate challenges to finish."""
-    start_time = time.time()
+def safe_quit_driver(driver) -> None:
+    """
+    Safely close and cleanup a Chrome driver to prevent cleanup warnings.
+    Suppresses all errors during cleanup to avoid 'Exception ignored' messages.
+    This helps prevent Windows handle errors during garbage collection.
+    """
+    if driver is None:
+        return
     
-    if show_status:
-        console.print("[cyan]Checking for Cloudflare / intermediate pages...[/cyan]")
+    try:
+        # Try to close all windows and quit the driver properly
+        if hasattr(driver, 'window_handles'):
+            try:
+                # Close all windows except the main one
+                handles = driver.window_handles
+                for handle in handles[1:]:
+                    try:
+                        driver.switch_to.window(handle)
+                        driver.close()
+                    except:
+                        pass
+                # Switch back to main window if it exists
+                if handles:
+                    try:
+                        driver.switch_to.window(handles[0])
+                    except:
+                        pass
+            except:
+                pass
+        
+        # Quit the driver
+        driver.quit()
+    except (OSError, AttributeError, Exception):
+        # Suppress all errors - handles may already be invalid
+        # This is expected on Windows when handles are cleaned up
+        pass
+    finally:
+        # Give Windows a moment to clean up handles before garbage collection
+        time.sleep(0.2)
+        # Try to clear service references to help with cleanup
+        try:
+            if hasattr(driver, 'service') and driver.service:
+                try:
+                    driver.service.stop()
+                except:
+                    pass
+                try:
+                    driver.service = None
+                except:
+                    pass
+        except:
+            pass
+        # Clear driver reference to help garbage collection
+        try:
+            if hasattr(driver, '_driver'):
+                driver._driver = None
+        except:
+            pass
+
+
+def wait_for_cloudflare(driver, max_wait: int = CF_MAX_WAIT, show_status: bool = False) -> bool:
+    """Wait for Cloudflare / intermediate challenges to finish.
+    Silent by default - no messages unless explicitly requested.
+    """
+    start_time = time.time()
 
     while time.time() - start_time < max_wait:
         try:
             title = driver.title.lower()
             if "just a moment" in title or "verifying" in title:
-                if show_status:
-                    console.print("[yellow]⏳ Cloudflare challenge detected, waiting...[/yellow]")
                 time.sleep(SHORT_WAIT)
                 continue
             # Heuristic: once we see indiankanoon main UI or court names, continue
             if "indiankanoon" in title or "indian kanoon" in title or "browse" in title:
-                if show_status:
-                    console.print("[green]✓ Cloudflare / intermediate challenge completed![/green]")
                 return True
             time.sleep(SHORT_WAIT)
         except Exception:
             time.sleep(SHORT_WAIT)
             continue
 
-    if show_status:
-        console.print("[red]✗ Cloudflare / intermediate challenge timeout[/red]")
     return False
 
 
@@ -197,7 +354,7 @@ def select_court(driver, court_name: str) -> None:
 
     try:
         court_link = driver.find_element(By.LINK_TEXT, court_name)
-        console.print(f"[green]✓[/green] Clicking court link: [bold]{court_name}[/bold]")
+        console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Clicking court link: [bold]{court_name}[/bold]")
         court_link.click()
     except NoSuchElementException:
         raise RuntimeError(f"Could not find court link with text '{court_name}' on browse page")
@@ -241,7 +398,7 @@ def discover_years(driver) -> List[Dict[str, str]]:
     # Sort by year descending (newest first)
     years.sort(key=lambda x: int(x["year"]), reverse=True)
     
-    console.print(f"[green]✓[/green] Discovered [bold cyan]{len(years)}[/bold cyan] years for this court")
+    console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Discovered [bold {get_style('primary')}]{len(years)}[/bold {get_style('primary')}] years for this court")
     return years
 
 
@@ -249,7 +406,7 @@ def select_year(driver, year_text: str) -> None:
     """Click on a year link from the court page."""
     try:
         year_link = driver.find_element(By.LINK_TEXT, year_text)
-        console.print(f"[green]✓[/green] Clicking year link: [bold]{year_text}[/bold]")
+        console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Clicking year link: [bold]{year_text}[/bold]")
         year_link.click()
         time.sleep(PAGE_LOAD_WAIT)
     except NoSuchElementException:
@@ -300,7 +457,7 @@ def discover_periods(driver) -> List[str]:
             candidates.append(label)
 
     # Preserve natural order as it appears on the page (already built that way)
-    console.print(f"[green]✓[/green] Discovered [bold cyan]{len(candidates)}[/bold cyan] period filters for this year")
+    console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Discovered [bold {get_style('primary')}]{len(candidates)}[/bold {get_style('primary')}] period filters for this year")
     return candidates
 
 
@@ -308,7 +465,7 @@ def select_period(driver, period_text: str) -> None:
     """Click on a period (month/entire year) link on the year page."""
     try:
         link = driver.find_element(By.LINK_TEXT, period_text)
-        console.print(f"[green]✓[/green] Clicking period link: [bold]{period_text}[/bold]")
+        console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Clicking period link: [bold]{period_text}[/bold]")
         link.click()
         time.sleep(PAGE_LOAD_WAIT)
     except NoSuchElementException:
@@ -353,11 +510,11 @@ def collect_case_links_from_court_page(driver) -> List[str]:
         seen.add(full_url)
         links.append(full_url)
 
-    console.print(f"[green]✓[/green] Found [bold cyan]{len(links)}[/bold cyan] unique /doc/ links on page")
+    console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Found [bold {get_style('primary')}]{len(links)}[/bold {get_style('primary')}] unique /doc/ links on page")
 
     if MAX_CASES is not None:
         links = links[:MAX_CASES]
-        console.print(f"[yellow]⚠[/yellow] Limiting to first [bold]{len(links)}[/bold] cases (MAX_CASES={MAX_CASES})")
+        console.print(f"[{get_style('warning')}]⚠[/{get_style('warning')}] Limiting to first [bold]{len(links)}[/bold] cases (MAX_CASES={MAX_CASES})")
 
     return links
 
@@ -377,9 +534,8 @@ def discover_courts(driver) -> Dict[str, List[str]]:
         driver.get(BASE_BROWSE_URL)
         time.sleep(PAGE_LOAD_WAIT)
     
-    # Check for Cloudflare outside the status context to avoid nested live displays
-    if not wait_for_cloudflare(driver, show_status=True):
-        raise RuntimeError("Could not bypass Cloudflare / intermediate page at browse URL")
+    # Silently wait for Cloudflare (no warnings needed)
+    wait_for_cloudflare(driver)
     
     time.sleep(PAGE_LOAD_WAIT)
 
@@ -410,7 +566,7 @@ def discover_courts(driver) -> Dict[str, List[str]]:
     high.sort()
     other.sort()
 
-    console.print(f"[green]✓[/green] Discovered [bold cyan]{len(supreme)}[/bold cyan] Supreme Court entries, [bold cyan]{len(high)}[/bold cyan] High Courts.")
+    console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Discovered [bold {get_style('primary')}]{len(supreme)}[/bold {get_style('primary')}] Supreme Court entries, [bold {get_style('primary')}]{len(high)}[/bold {get_style('primary')}] High Courts.")
 
     return {"supreme": supreme, "high": high, "other": other}
 
@@ -458,7 +614,7 @@ def scrape_court_cases(court_name: str, year: str = None, period: str = None) ->
                 # Ensure we capture full text (may click 'View Complete document')
                 content = get_full_judgment_text(driver, url)
 
-                console.print(f"[green]✓[/green] [{idx}/{len(case_links)}] Scraped case: [bold]{title[:80]}[/bold]")
+                console.print(f"[{get_style('success')}]✓[/{get_style('success')}] [{idx}/{len(case_links)}] Scraped case: [bold]{title[:80]}[/bold]")
 
                 result_dict = {
                     "court": court_name,
@@ -476,14 +632,11 @@ def scrape_court_cases(court_name: str, year: str = None, period: str = None) ->
                 # Be polite; short delay between cases
                 time.sleep(2)
             except Exception as e:
-                console.print(f"[red]✗[/red] Error scraping case {idx} at {url}: {e}")
+                console.print(f"[{get_style('error')}]✗[/{get_style('error')}] Error scraping case {idx} at {url}: {e}")
                 continue
     finally:
-        if driver:
-            try:
-                driver.quit()
-            except Exception:
-                pass
+        safe_quit_driver(driver)
+        driver = None  # Help garbage collection
 
     return results
 
@@ -497,7 +650,7 @@ def save_cases_to_json(cases: List[Dict], output_path: str) -> None:
     with console.status(f"[bold cyan]Saving {len(cases)} cases to file...", spinner="dots"):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(cases, f, ensure_ascii=False, indent=2)
-    console.print(f"[green]✓[/green] Saved [bold cyan]{len(cases)}[/bold cyan] cases to [bold]{output_path}[/bold]")
+    console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Saved [bold {get_style('primary')}]{len(cases)}[/bold {get_style('primary')}] cases to [bold]{output_path}[/bold]")
 
 
 def slugify_court_name(name: str) -> str:
@@ -620,8 +773,8 @@ def scrape_search_results(
     console.print(f"\n[bold cyan]Loading search results page...[/bold cyan]")
     driver.get(search_url)
     
-    if not wait_for_cloudflare(driver):
-        console.print("[yellow]⚠ Warning: Cloudflare challenge may not have completed fully[/yellow]")
+    # Silently wait for Cloudflare (no warnings needed)
+    wait_for_cloudflare(driver)
     
     time.sleep(PAGE_LOAD_WAIT)
     
@@ -648,10 +801,10 @@ def scrape_search_results(
             
             # Extract case links from current search results page
             case_links = extract_case_links_from_search_page(driver)
-            console.print(f"[green]✓[/green] Found [bold cyan]{len(case_links)}[/bold cyan] case links on page {current_page}")
+            console.print(f"[{get_style('success')}]✓[/{get_style('success')}] Found [bold {get_style('primary')}]{len(case_links)}[/bold {get_style('primary')}] case links on page {current_page}")
             
             if not case_links:
-                console.print(f"[yellow]⚠[/yellow] No case links found on page {current_page}. Stopping.")
+                console.print(f"[{get_style('warning')}]⚠[/{get_style('warning')}] No case links found on page {current_page}. Stopping.")
                 break
             
             # Scrape each case one by one
@@ -691,7 +844,7 @@ def scrape_search_results(
                     page_text_lower = content.lower()
                     expected_court_lower = court_name.lower()
                     if expected_court_lower not in page_text_lower:
-                        console.print(f"    [yellow]↷[/yellow] Skipping case (court name not found in document body).")
+                        console.print(f"    [{get_style('warning')}]↷[/{get_style('warning')}] Skipping case (court name not found in document body).")
                         # Go back to search results before continuing
                         driver.get(current_search_url)
                         time.sleep(SHORT_WAIT)
@@ -715,7 +868,7 @@ def scrape_search_results(
                         case_dict["keyword"] = keyword
                     
                     all_cases.append(case_dict)
-                    console.print(f"    [green]✓[/green] Scraped and saved: [bold]{title[:60]}...[/bold]")
+                    console.print(f"    [{get_style('success')}]✓[/{get_style('success')}] Scraped and saved: [bold]{title[:60]}...[/bold]")
                     
                     # Step 7: Go back to search results page before next case
                     driver.get(current_search_url)
@@ -724,7 +877,7 @@ def scrape_search_results(
                     progress.update(case_task, advance=1)
                     
                 except Exception as e:
-                    console.print(f"    [red]✗[/red] Error scraping case {idx}: {e}")
+                    console.print(f"    [{get_style('error')}]✗[/{get_style('error')}] Error scraping case {idx}: {e}")
                     # Try to go back to search results even on error
                     try:
                         driver.get(current_search_url)
@@ -759,17 +912,30 @@ def scrape_search_results(
 
 
 def main():
+    # Use default theme (dark) - no selection needed
+    set_theme(DEFAULT_THEME)
+    
+    # Show welcome banner
+    welcome_panel = Panel(
+        "[bold]Forensic-LLM[/bold]\n"
+        "A tool for scraping legal cases from Indian Kanoon and extracting evidence using AI.",
+        title="[bold]Welcome[/bold]",
+        border_style=get_style("panel_style"),
+        box=box.ROUNDED,
+        padding=(1, 2)
+    )
+    console.print()
+    console.print(welcome_panel)
+    console.print()
+    
     # Use a temporary browser instance just to discover courts for menu
     temp_driver = None
     try:
         temp_driver = get_driver()
         courts = discover_courts(temp_driver)
     finally:
-        if temp_driver:
-            try:
-                temp_driver.quit()
-            except Exception:
-                pass
+        safe_quit_driver(temp_driver)
+        temp_driver = None  # Help garbage collection
 
     supreme = courts.get("supreme", [])
     high = courts.get("high", [])
@@ -778,10 +944,15 @@ def main():
     menu_items: List[str] = supreme + high
 
     # Create a beautiful table for court selection
-    table = Table(title="[bold cyan]Select a Court to Scrape[/bold cyan]", box=box.ROUNDED, show_header=True, header_style="bold magenta")
-    table.add_column("No.", style="cyan", width=5)
-    table.add_column("Court Name", style="green")
-    table.add_column("Type", style="yellow")
+    table = Table(
+        title=f"[bold {get_style('table_style')}]Select a Court to Scrape[/bold {get_style('table_style')}]",
+        box=box.ROUNDED,
+        show_header=True,
+        header_style=f"bold {get_style('accent')}"
+    )
+    table.add_column("No.", style=get_style("primary"), width=5)
+    table.add_column("Court Name", style=get_style("success"))
+    table.add_column("Type", style=get_style("warning"))
 
     if supreme:
         for idx, name in enumerate(supreme, start=1):
@@ -797,18 +968,18 @@ def main():
 
     total = len(menu_items)
     if total == 0:
-        console.print("[red]✗ No courts discovered on browse page. Exiting.[/red]")
+        console.print(f"[{get_style('error')}]✗ No courts discovered on browse page. Exiting.[/{get_style('error')}]")
         return
 
     # Simple input loop
     while True:
-        choice = IntPrompt.ask(f"\n[bold cyan]Enter the number of the court[/bold cyan] (1-{total})", default=1)
+        choice = IntPrompt.ask(f"\n[bold {get_style('primary')}]Enter the number of the court[/bold {get_style('primary')}] (1-{total})", default=1)
         if 1 <= choice <= total:
             break
-        console.print(f"[red]Please enter a number between 1 and {total}.[/red]")
+        console.print(f"[{get_style('error')}]Please enter a number between 1 and {total}.[/{get_style('error')}]")
 
     selected_court = menu_items[choice - 1]
-    console.print(f"\n[green]✓[/green] You selected: [bold cyan]{selected_court}[/bold cyan]")
+    console.print(f"\n[{get_style('success')}]✓[/{get_style('success')}] You selected: [bold {get_style('primary')}]{selected_court}[/bold {get_style('primary')}]")
 
     # Now discover years for this court, and optionally periods (months)
     temp_driver2 = None
@@ -820,9 +991,14 @@ def main():
         years = discover_years(temp_driver2)
         
         if years:
-            year_table = Table(title="[bold cyan]Available Years[/bold cyan]", box=box.ROUNDED, show_header=True, header_style="bold magenta")
-            year_table.add_column("No.", style="cyan", width=5)
-            year_table.add_column("Year", style="green")
+            year_table = Table(
+                title=f"[bold {get_style('table_style')}]Available Years[/bold {get_style('table_style')}]",
+                box=box.ROUNDED,
+                show_header=True,
+                header_style=f"bold {get_style('accent')}"
+            )
+            year_table.add_column("No.", style=get_style("primary"), width=5)
+            year_table.add_column("Year", style=get_style("success"))
             
             for idx, year_info in enumerate(years, start=1):
                 year_table.add_row(str(idx), year_info['text'])
@@ -852,9 +1028,14 @@ def main():
                     # Discover periods (Entire Year, January, ..., December)
                     periods = discover_periods(temp_driver2)
                     if periods:
-                        period_table = Table(title="[bold cyan]Available Periods[/bold cyan]", box=box.ROUNDED, show_header=True, header_style="bold magenta")
-                        period_table.add_column("No.", style="cyan", width=5)
-                        period_table.add_column("Period", style="green")
+                        period_table = Table(
+                            title=f"[bold {get_style('table_style')}]Available Periods[/bold {get_style('table_style')}]",
+                            box=box.ROUNDED,
+                            show_header=True,
+                            header_style=f"bold {get_style('accent')}"
+                        )
+                        period_table.add_column("No.", style=get_style("primary"), width=5)
+                        period_table.add_column("Period", style=get_style("success"))
                         
                         for p_idx, p_text in enumerate(periods, start=1):
                             period_table.add_row(str(p_idx), p_text)
@@ -877,24 +1058,25 @@ def main():
                                 selected_period = periods[period_choice - 1]
                                 console.print(f"[green]✓[/green] You selected period: [bold cyan]{selected_period}[/bold cyan]")
                                 break
-                            console.print(f"[red]Please enter a number between 1 and {total_periods}.[/red]")
+                            console.print(f"[{get_style('error')}]Please enter a number between 1 and {total_periods}.[/{get_style('error')}]")
                     else:
                         console.print("[yellow]⚠[/yellow] No period filters found for this year. Proceeding without period filter.")
                     break
-                console.print(f"[red]Please enter a number between 1 and {total_years}.[/red]")
+                console.print(f"[{get_style('error')}]Please enter a number between 1 and {total_years}.[/{get_style('error')}]")
         else:
             console.print("[yellow]⚠[/yellow] No years found on court page. Proceeding without year/period filter.")
     finally:
-        if temp_driver2:
-            try:
-                temp_driver2.quit()
-            except Exception:
-                pass
+        safe_quit_driver(temp_driver2)
+        temp_driver2 = None  # Help garbage collection
 
     # At this point we STOP before scraping and just show the final selection
-    summary_table = Table(title="[bold cyan]Navigation Summary[/bold cyan]", box=box.ROUNDED, show_header=False)
-    summary_table.add_column("Field", style="cyan", width=15)
-    summary_table.add_column("Value", style="green")
+    summary_table = Table(
+        title=f"[bold {get_style('table_style')}]Navigation Summary[/bold {get_style('table_style')}]",
+        box=box.ROUNDED,
+        show_header=False
+    )
+    summary_table.add_column("Field", style=get_style("primary"), width=15)
+    summary_table.add_column("Value", style=get_style("success"))
     
     summary_table.add_row("Court", selected_court)
     summary_table.add_row("Year", selected_year if selected_year else "(none selected)")
@@ -905,7 +1087,7 @@ def main():
 
     # Ask user for target keyword to build a search URL
     keyword = Prompt.ask(
-        "\n[bold cyan]Enter target keyword for search[/bold cyan] (e.g. murder, rape, robbery), or press Enter to finish",
+        f"\n[bold {get_style('primary')}]Enter target keyword for search[/bold {get_style('primary')}] (e.g. murder, rape, robbery), or press Enter to finish",
         default=""
     ).strip()
 
@@ -927,9 +1109,13 @@ def main():
     encoded_query = quote_plus(search_query)
     search_url = f"https://indiankanoon.org/search/?formInput={encoded_query}"
 
-    search_info = Table(title="[bold cyan]Search Configuration[/bold cyan]", box=box.ROUNDED, show_header=False)
-    search_info.add_column("Field", style="cyan", width=10)
-    search_info.add_column("Value", style="green")
+    search_info = Table(
+        title=f"[bold {get_style('table_style')}]Search Configuration[/bold {get_style('table_style')}]",
+        box=box.ROUNDED,
+        show_header=False
+    )
+    search_info.add_column("Field", style=get_style("primary"), width=10)
+    search_info.add_column("Value", style=get_style("success"))
     search_info.add_row("Query", search_query)
     search_info.add_row("URL", search_url)
     
@@ -949,32 +1135,28 @@ def main():
             total_cases_hint = page_info.get("total_cases") or 0
             total_pages_hint = page_info.get("total_pages") or 0
         
-        # Check for Cloudflare outside the status context to avoid nested live displays
-        if not wait_for_cloudflare(temp_driver3, show_status=False):
-            console.print("[yellow]⚠ Warning: Cloudflare may not have fully cleared while inspecting pagination.[/yellow]")
-            if total_pages_hint and total_cases_hint:
-                console.print(
-                    f"\n[green]✓[/green] Search results show approximately [bold cyan]{total_cases_hint}[/bold cyan] cases "
-                    f"across [bold cyan]{total_pages_hint}[/bold cyan] page(s) (~{page_info.get('per_page', 0)} cases per page)."
-                )
-            else:
-                console.print("[yellow]⚠[/yellow] Could not automatically determine total pages/cases from search results.")
+        # Silently wait for Cloudflare (no warnings needed)
+        wait_for_cloudflare(temp_driver3, show_status=False)
+        if total_pages_hint and total_cases_hint:
+            console.print(
+                f"\n[green]✓[/green] Search results show approximately [bold cyan]{total_cases_hint}[/bold cyan] cases "
+                f"across [bold cyan]{total_pages_hint}[/bold cyan] page(s) (~{page_info.get('per_page', 0)} cases per page)."
+            )
+        else:
+            console.print("[yellow]⚠[/yellow] Could not automatically determine total pages/cases from search results.")
     finally:
-        if temp_driver3:
-            try:
-                temp_driver3.quit()
-            except Exception:
-                pass
+        safe_quit_driver(temp_driver3)
+        temp_driver3 = None  # Help garbage collection
 
     # Ask user how many pages to scrape, using the detected total pages as a hint
     if total_pages_hint and total_pages_hint > 0:
         max_pages = IntPrompt.ask(
-            f"\n[bold cyan]How many pages of results to scrape?[/bold cyan] (Detected up to {total_pages_hint} pages)",
+            f"\n[bold {get_style('primary')}]How many pages of results to scrape?[/bold {get_style('primary')}] (Detected up to {total_pages_hint} pages)",
             default=1
         )
     else:
         max_pages = IntPrompt.ask(
-            "\n[bold cyan]How many pages of results to scrape?[/bold cyan]",
+            f"\n[bold {get_style('primary')}]How many pages of results to scrape?[/bold {get_style('primary')}]",
             default=1
         )
 
@@ -985,11 +1167,8 @@ def main():
         driver = get_driver()
         all_cases = scrape_search_results(driver, search_url, max_pages, selected_court, selected_year, selected_period, keyword)
     finally:
-        if driver:
-            try:
-                driver.quit()
-            except Exception:
-                pass
+        safe_quit_driver(driver)
+        driver = None  # Help garbage collection
 
     # Save results
     if all_cases:
@@ -1005,15 +1184,66 @@ def main():
         save_cases_to_json(all_cases, output_file)
         
         success_panel = Panel(
-            f"[bold green]✓ Scraping completed![/bold green]\n\n"
-            f"Saved [bold cyan]{len(all_cases)}[/bold cyan] cases to:\n"
+            f"[bold {get_style('success')}]✓ Scraping completed![/bold {get_style('success')}]\n\n"
+            f"Saved [bold {get_style('primary')}]{len(all_cases)}[/bold {get_style('primary')}] cases to:\n"
             f"[bold]{output_file}[/bold]",
-            title="[bold green]Success[/bold green]",
-            border_style="green",
+            title=f"[bold {get_style('success')}]Success[/bold {get_style('success')}]",
+            border_style=get_style("success"),
             box=box.ROUNDED
         )
         console.print()
         console.print(success_panel)
+        
+        # Ask if user wants to extract evidence
+        console.print()
+        extract_evidence = Confirm.ask(
+            f"\n[bold {get_style('primary')}]Do you want to extract evidence from these cases?[/bold {get_style('primary')}]",
+            default=True
+        )
+        
+        if extract_evidence:
+            console.print(f"\n[bold {get_style('primary')}]Starting evidence extraction...[/bold {get_style('primary')}]")
+            try:
+                # Import the evidence extractor
+                import sys
+                from pathlib import Path
+                
+                # Get the path to evidence_extractor.py
+                script_dir = Path(__file__).parent.absolute()
+                workspace_root = script_dir.parent
+                evidence_extractor_path = workspace_root / "Analysis" / "evidence_extractor.py"
+                
+                # Add Analysis directory to path to import the module
+                analysis_dir = workspace_root / "Analysis"
+                if str(analysis_dir) not in sys.path:
+                    sys.path.insert(0, str(analysis_dir))
+                
+                # Import and use the evidence extractor
+                from evidence_extractor import WorkingEvidenceExtractor
+                
+                # Create extractor instance
+                extractor = WorkingEvidenceExtractor()
+                
+                # Process the JSON file that was just created
+                # Convert to absolute path to ensure it's found
+                abs_output_file = os.path.abspath(output_file)
+                extractor.process_json(
+                    json_file=abs_output_file,
+                    output_file=None,  # Use default output location
+                    max_cases=None,  # Process all cases
+                    start_index=0
+                )
+                
+                console.print("\n[bold green]✓ Evidence extraction completed![/bold green]")
+                
+            except ImportError as e:
+                console.print(f"[red]✗[/red] Could not import evidence extractor: {e}")
+                console.print("[yellow]⚠[/yellow] Make sure evidence_extractor.py is in the Analysis folder")
+            except Exception as e:
+                console.print(f"[red]✗[/red] Error during evidence extraction: {e}")
+                import traceback
+                console.print(f"[red]Traceback:[/red]")
+                console.print(traceback.format_exc())
     else:
         console.print("\n[yellow]⚠[/yellow] No cases were scraped.")
 

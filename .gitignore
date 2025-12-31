@@ -20,27 +20,29 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environments
+# Virtual environments
 venv/
 env/
 ENV/
-.venv
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# Logs
+# Project specific
+Extractor/raw output/*.json
+Extractor/Output/*.json
+Analysis/Output/*.json
 *.log
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Output files (uncomment if you don't want to track output files)
-# Analysis/Output/
-# Extractor/raw output/
+# Keep directory structure but ignore content
+!Extractor/raw output/.gitkeep
+!Extractor/Output/.gitkeep
+!Analysis/Output/.gitkeep
 
