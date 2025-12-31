@@ -16,32 +16,6 @@ Forensic-LLM is a comprehensive tool with two integrated components:
 1. **Case Scraper** - Intelligently scrapes legal cases from Indian Kanoon website with interactive court/year/keyword selection
 2. **AI Evidence Extractor** - Uses local LLM (Ollama) to analyze cases and extract structured evidence automatically
 
-### Key Features
-
--  **Beautiful Interactive CLI** - Rich terminal UI with tables, progress bars, and color-coded output
--  **Smart Case Discovery** - Automatically discovers available courts, years, and periods
--  **Multi-page Scraping** - Scrapes multiple pages of search results with progress tracking
--  **AI-Powered Analysis** - Extracts evidence using local LLM (Ollama) - no cloud API required
--  **Integrated Workflow** - Optionally runs evidence extraction automatically after scraping
--  **Progress Saving** - Auto-saves progress every 5 cases (resume anytime)
--  **Structured Output** - Clean JSON format for easy integration with other tools
-
----
-
-##  Table of Contents
-
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Usage Guide](#usage-guide)
-- [Command Line Options](#command-line-options)
-- [Output Format](#output-format)
-- [System Requirements](#system-requirements)
-- [Advanced Usage](#advanced-usage)
-- [Troubleshooting](#troubleshooting)
-
----
 
 ##  Project Structure
 
@@ -370,7 +344,7 @@ All required packages are listed in `requirements.txt` and installed automatical
 
 ---
 
-## 🔬 Advanced Usage
+##  Advanced Usage
 
 ### Running on Different PCs
 
@@ -437,7 +411,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -514,7 +488,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 
 ---
 
-## 📝 Important Notes
+##  Important Notes
 
 - **Website Delays**: The scraper includes delays to respect the website and avoid overloading servers
 - **Progress Saving**: Evidence extraction saves progress every 5 cases, so you can stop and resume
@@ -526,7 +500,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 
 ---
 
-## 🆘 Support
+##  Support
 
 For issues or questions:
 
@@ -538,13 +512,13 @@ For issues or questions:
 
 ---
 
-## 📄 License
+##  License
 
 This project is provided as-is for educational and research purposes. Please respect the terms of service of Indian Kanoon when using this tool.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Indian Kanoon** - For providing access to legal case data
 - **Ollama** - For providing local LLM capabilities
