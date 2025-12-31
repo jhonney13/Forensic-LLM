@@ -166,7 +166,7 @@ python browse_scraper.py
 
 ### Interactive Workflow
 
-![Forensic LLM](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm.jpg)
+![Forensic LLM](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm-running.jpg)
 
 
 When you run `forensic-llm`, you'll be guided through an interactive process:
