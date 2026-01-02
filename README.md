@@ -42,7 +42,7 @@ Forensic LLM Working/
 
 ##  CLI Workflow Flowchart
 
-![CLI Workflow Flowchart](https://github.com/jhonney13/Forensic-LLM/blob/main/img/diagram-export-1-2-2026-12_57_53-PM.png)
+![CLI Workflow Flowchart](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/diagram-export-1-2-2026-12_15_40-PM.jpg)
 
 ### Interactive Workflow
 When you run `forensic-llm`, you'll be guided through an interactive process:
