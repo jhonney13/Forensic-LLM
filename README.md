@@ -7,9 +7,6 @@
 
 Forensic-LLM combines web scraping with AI-powered analysis to help legal researchers, lawyers, and forensic analysts efficiently extract and analyze evidence from Indian court judgments.
 
-Forensic-LLM utilizes the local LLM Ollama, with the default model being Google `gemma3:4b`, to efficiently extract structured evidence from legal cases.
-
-
 
 ##  What This Project Does
 
