@@ -1,13 +1,11 @@
 # Forensic-LLM
 
-<img src="https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/forensic-llm%20(1).jpg" />
+<img src="https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/ForensicLLM-Open-Source.png" />
 
 
 **An AI-powered CLI tool for scraping legal cases from Indian Kanoon and extracting evidence using local LLMs.**
 
 Forensic-LLM combines web scraping with AI-powered analysis to help legal researchers, lawyers, and forensic analysts efficiently extract and analyze evidence from Indian court judgments.
-
-<img src="https://ollama.com/assets/library/gemma3/b54bf767-f9c5-4284-b551-a49aebe3a3c2" />
 
 Forensic-LLM utilizes the local LLM Ollama, with the default model being Google `gemma3:4b`, to efficiently extract structured evidence from legal cases.
 
