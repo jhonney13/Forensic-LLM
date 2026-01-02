@@ -42,7 +42,7 @@ Forensic LLM Working/
 └── README.md                      # This file
 ```
 
----
+
 
 ##  CLI Workflow Flowchart
 
@@ -74,7 +74,7 @@ Before installing Forensic-LLM, ensure you have:
   ```
 - **Note**: Ollama is only needed for evidence extraction, not for scraping
 
----
+
 
 ##  Installation
 
@@ -126,7 +126,7 @@ forensic-llm
 
 You should see a welcome banner and the interactive menu should start.
 
----
+
 
 ##  Quick Start
 
@@ -146,7 +146,7 @@ If you prefer not to install the command:
 cd "C:\Forensic LLM\Forensic LLM Working\Extractor"
 python browse_scraper.py
 ```
----
+
 
 ##  Usage Guide
 
@@ -222,7 +222,7 @@ The script will:
 python evidence_extractor.py --json "Extractor/raw output/your_file.json"
 ```
 
----
+
 
 ##  Command Line Options
 
@@ -261,7 +261,7 @@ python evidence_extractor.py --json "cases.json" --model "llama2:7b"
 python evidence_extractor.py --csv "cases.csv" --max-cases 20
 ```
 
----
+
 
 ##  Output Format
 
@@ -324,7 +324,7 @@ Each case analysis includes structured evidence:
 }
 ```
 
----
+
 
 ##  System Requirements
 
@@ -354,7 +354,7 @@ All required packages are listed in `requirements.txt` and installed automatical
 - `requests` - HTTP requests (for Ollama API)
 - `tqdm` - Progress bars
 
----
+
 
 ##  Advanced Usage
 
@@ -421,7 +421,7 @@ python evidence_extractor.py --json "cases.json" --start 50
 
 Progress is auto-saved every 5 cases, so you won't lose much work.
 
----
+
 
 ##  Troubleshooting
 
@@ -510,7 +510,7 @@ Progress is auto-saved every 5 cases, so you won't lose much work.
 - **Cloudflare Protection**: The scraper automatically waits for Cloudflare protection to pass
 - **Rate Limiting**: Built-in delays prevent overwhelming the Indian Kanoon servers
 
----
+
 
 ##  Support
 
@@ -522,13 +522,13 @@ For issues or questions:
 4. Ensure Chrome browser is up to date
 5. Review log files: `Extractor/evidence_extraction.log`
 
----
+
 
 ##  License
 
 This project is provided as-is for educational and research purposes. Please respect the terms of service of Indian Kanoon when using this tool.
 
----
+
 
 ##  Acknowledgments
 
@@ -537,6 +537,6 @@ This project is provided as-is for educational and research purposes. Please res
 - **Rich** - For the beautiful terminal UI library
 - **Selenium & BeautifulSoup** - For web scraping capabilities
 
----
+
 
 **Made with ❤️ for legal researchers and forensic analysts**
