@@ -121,6 +121,10 @@ forensic-llm
 
 You should see a welcome banner and the interactive menu should start.
 
+##  Forensic-llm Architecture
+
+![Forensic-llm Architecture](https://raw.githubusercontent.com/jhonney13/Forensic-LLM/refs/heads/main/img/Forensic-LLM%20Architecture.png)
+
 
 
 ##  Quick Start
